@@ -19,7 +19,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 profile
-
+AshaNet_iOS.xcworkspace/xcshareddata/AshaNet_iOS.xccheckout
 # CocoaPods
 #
 # The pros and cons of ignoring the Pods directory are mentioned at:
