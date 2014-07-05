@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *projectsTable;
 @property (nonatomic, strong) ProjectsTableViewCell *prototypeCell;
-@property (nonatomic, copy) NSArray *places;
+@property (nonatomic, copy) NSArray *projects;
 
 @end
 
