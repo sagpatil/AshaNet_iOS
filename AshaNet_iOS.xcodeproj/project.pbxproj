@@ -14,6 +14,11 @@
 		9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */; };
 		9F38217519686CD100C8AF42 /* GeneralDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */; };
 		B41C485B5E36413F827619DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA966DF4B42F42A3B1791AC3 /* libPods.a */; };
+		F12627321968788E00CC6544 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F126272C1968788E00CC6544 /* libPayPalMobile.a */; };
+		F126273419687C8E00CC6544 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273319687C8E00CC6544 /* AVFoundation.framework */; };
+		F126273619687C9C00CC6544 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273519687C9C00CC6544 /* CoreLocation.framework */; };
+		F126273819687CA200CC6544 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273719687CA200CC6544 /* MessageUI.framework */; };
+		F126273A19687CAB00CC6544 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273919687CAB00CC6544 /* SystemConfiguration.framework */; };
 		F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68A196303E9001EE5B2 /* Foundation.framework */; };
 		F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */; };
 		F1F6E68F196303E9001EE5B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68E196303E9001EE5B2 /* UIKit.framework */; };
@@ -50,6 +55,16 @@
 		9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralDonateViewController.xib; sourceTree = "<group>"; };
 		AA966DF4B42F42A3B1791AC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F126272C1968788E00CC6544 /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		F126272D1968788E00CC6544 /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
+		F126272E1968788E00CC6544 /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		F126272F1968788E00CC6544 /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		F12627301968788E00CC6544 /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		F12627311968788E00CC6544 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		F126273319687C8E00CC6544 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F126273519687C9C00CC6544 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F126273719687CA200CC6544 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F126273919687CAB00CC6544 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F6E68A196303E9001EE5B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,9 +88,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F126273A19687CAB00CC6544 /* SystemConfiguration.framework in Frameworks */,
+				F126273819687CA200CC6544 /* MessageUI.framework in Frameworks */,
+				F126273619687C9C00CC6544 /* CoreLocation.framework in Frameworks */,
+				F126273419687C8E00CC6544 /* AVFoundation.framework in Frameworks */,
 				F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */,
 				F1F6E68F196303E9001EE5B2 /* UIKit.framework in Frameworks */,
 				F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */,
+				F12627321968788E00CC6544 /* libPayPalMobile.a in Frameworks */,
 				B41C485B5E36413F827619DE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,9 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F126272B1968788E00CC6544 /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				F126272C1968788E00CC6544 /* libPayPalMobile.a */,
+				F126272D1968788E00CC6544 /* PayPalConfiguration.h */,
+				F126272E1968788E00CC6544 /* PayPalFuturePaymentViewController.h */,
+				F126272F1968788E00CC6544 /* PayPalMobile.h */,
+				F12627301968788E00CC6544 /* PayPalPayment.h */,
+				F12627311968788E00CC6544 /* PayPalPaymentViewController.h */,
+			);
+			path = PayPalMobile;
+			sourceTree = "<group>";
+		};
 		F1F6E67E196303E9001EE5B2 = {
 			isa = PBXGroup;
 			children = (
+				F126272B1968788E00CC6544 /* PayPalMobile */,
 				F1F6E690196303E9001EE5B2 /* AshaNet_iOS */,
 				F1F6E6A9196303E9001EE5B2 /* AshaNet_iOSTests */,
 				F1F6E689196303E9001EE5B2 /* Frameworks */,
@@ -116,6 +150,10 @@
 		F1F6E689196303E9001EE5B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F126273919687CAB00CC6544 /* SystemConfiguration.framework */,
+				F126273719687CA200CC6544 /* MessageUI.framework */,
+				F126273519687C9C00CC6544 /* CoreLocation.framework */,
+				F126273319687C8E00CC6544 /* AVFoundation.framework */,
 				F1F6E68A196303E9001EE5B2 /* Foundation.framework */,
 				F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */,
 				F1F6E68E196303E9001EE5B2 /* UIKit.framework */,
@@ -432,6 +470,23 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AshaNet_iOS/AshaNet_iOS-Prefix.pch";
 				INFOPLIST_FILE = "AshaNet_iOS/AshaNet_iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PayPalMobile",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -446,6 +501,23 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AshaNet_iOS/AshaNet_iOS-Prefix.pch";
 				INFOPLIST_FILE = "AshaNet_iOS/AshaNet_iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PayPalMobile",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

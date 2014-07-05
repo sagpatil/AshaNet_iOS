@@ -5,19 +5,23 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6F41FC17-FC2A-46C7-9D68-62FB941CF500</string>
+	<string>7E71D333-C1D7-4EA4-9482-AB8773FCFFFB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AshaNet_iOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>EB66FBC2-5CB7-4661-B9F7-8032F2A3E9FA</key>
+		<key>06964AC2-2BDF-4FD8-8258-A8643FC9F0EF</key>
+		<string>https://github.com/sagpatil/AshaNet_iOS.git</string>
+		<key>C5199680-A38B-4958-9C87-E2BE6AC98DA9</key>
 		<string>https://github.com/sagpatil/TwitMe.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>AshaNet_iOS/AshaNet_iOS.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EB66FBC2-5CB7-4661-B9F7-8032F2A3E9FA</key>
+		<key>06964AC2-2BDF-4FD8-8258-A8643FC9F0EF</key>
+		<string>..</string>
+		<key>C5199680-A38B-4958-9C87-E2BE6AC98DA9</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +29,22 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EB66FBC2-5CB7-4661-B9F7-8032F2A3E9FA</string>
+	<string>C5199680-A38B-4958-9C87-E2BE6AC98DA9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EB66FBC2-5CB7-4661-B9F7-8032F2A3E9FA</string>
+			<string>06964AC2-2BDF-4FD8-8258-A8643FC9F0EF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AshaNet_iOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C5199680-A38B-4958-9C87-E2BE6AC98DA9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CodePath</string>
 		</dict>
