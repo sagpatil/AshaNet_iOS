@@ -1,5 +1,5 @@
 //
-//  ProjectsViewController.h
+//  EventsTableViewCell.h
 //  AshaNet_iOS
 //
 //  Created by Savla, Sumit on 7/5/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface EventsTableViewCell : UITableViewCell
 
 @end
