@@ -7,15 +7,40 @@
 //
 
 #import "AppDelegate.h"
+#import "ProjectsViewController.h"
+#import "EventsViewController.h"
+#import "GeneralDonateViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    ProjectsViewController *pvc = [[ProjectsViewController alloc] init];
+    EventsViewController *evc = [[EventsViewController alloc] init];
+    GeneralDonateViewController *gdvc = [[GeneralDonateViewController alloc] init];
+
+    UINavigationController *projectsNavController = [[UINavigationController alloc] initWithRootViewController:pvc];
+    projectsNavController.tabBarItem.title = @"Projects";
+//    projectsNavController.tabBarItem.image = [UIImage imageNamed:@"MovieIcon"];
+    
+    UINavigationController *eventsNavController = [[UINavigationController alloc] initWithRootViewController:evc];
+    eventsNavController.tabBarItem.title = @"Events";
+    
+    UINavigationController *donateNavController = [[UINavigationController alloc] initWithRootViewController:gdvc];
+    donateNavController.tabBarItem.title = @"Donate";
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[projectsNavController, donateNavController, eventsNavController];
+    
+    tabBarController.tabBar.tintColor = [UIColor yellowColor];
+    tabBarController.tabBar.barTintColor = [UIColor blackColor];
+    self.window.rootViewController = tabBarController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

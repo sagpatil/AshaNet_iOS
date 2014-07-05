@@ -1,1010 +1,527 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>06455DB77CA944C685283BC7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>AA966DF4B42F42A3B1791AC3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B41C485B5E36413F827619DE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AA966DF4B42F42A3B1791AC3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BB214888FFFE4A15B579B7E6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF75801B78E64181BEC35014</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F1F6E67E196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E690196303E9001EE5B2</string>
-				<string>F1F6E6A9196303E9001EE5B2</string>
-				<string>F1F6E689196303E9001EE5B2</string>
-				<string>F1F6E688196303E9001EE5B2</string>
-				<string>BB214888FFFE4A15B579B7E6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E67F196303E9001EE5B2</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Patil, Sagar</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>F1F6E6A1196303E9001EE5B2</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>F1F6E686196303E9001EE5B2</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>F1F6E682196303E9001EE5B2</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>F1F6E67E196303E9001EE5B2</string>
-			<key>productRefGroup</key>
-			<string>F1F6E688196303E9001EE5B2</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>F1F6E686196303E9001EE5B2</string>
-				<string>F1F6E6A1196303E9001EE5B2</string>
-			</array>
-		</dict>
-		<key>F1F6E682196303E9001EE5B2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F1F6E6B1196303E9001EE5B2</string>
-				<string>F1F6E6B2196303E9001EE5B2</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F1F6E683196303E9001EE5B2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1F6E69B196303E9001EE5B2</string>
-				<string>F1F6E697196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F1F6E684196303E9001EE5B2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1F6E68D196303E9001EE5B2</string>
-				<string>F1F6E68F196303E9001EE5B2</string>
-				<string>F1F6E68B196303E9001EE5B2</string>
-				<string>B41C485B5E36413F827619DE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F1F6E685196303E9001EE5B2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1F6E695196303E9001EE5B2</string>
-				<string>F1F6E69D196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F1F6E686196303E9001EE5B2</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F1F6E6B3196303E9001EE5B2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>BF75801B78E64181BEC35014</string>
-				<string>F1F6E683196303E9001EE5B2</string>
-				<string>F1F6E684196303E9001EE5B2</string>
-				<string>F1F6E685196303E9001EE5B2</string>
-				<string>06455DB77CA944C685283BC7</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>AshaNet_iOS</string>
-			<key>productName</key>
-			<string>AshaNet_iOS</string>
-			<key>productReference</key>
-			<string>F1F6E687196303E9001EE5B2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>F1F6E687196303E9001EE5B2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>AshaNet_iOS.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F1F6E688196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E687196303E9001EE5B2</string>
-				<string>F1F6E6A2196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E689196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E68A196303E9001EE5B2</string>
-				<string>F1F6E68C196303E9001EE5B2</string>
-				<string>F1F6E68E196303E9001EE5B2</string>
-				<string>F1F6E6A3196303E9001EE5B2</string>
-				<string>AA966DF4B42F42A3B1791AC3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E68A196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>F1F6E68B196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E68A196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E68C196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>F1F6E68D196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E68C196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E68E196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>F1F6E68F196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E68E196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E690196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E699196303E9001EE5B2</string>
-				<string>F1F6E69A196303E9001EE5B2</string>
-				<string>F1F6E69C196303E9001EE5B2</string>
-				<string>F1F6E691196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>AshaNet_iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E691196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E692196303E9001EE5B2</string>
-				<string>F1F6E693196303E9001EE5B2</string>
-				<string>F1F6E696196303E9001EE5B2</string>
-				<string>F1F6E698196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E692196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>AshaNet_iOS-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E693196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E694196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E694196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E695196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E693196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E696196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E697196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E696196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E698196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AshaNet_iOS-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E699196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E69A196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E69B196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E69A196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E69C196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E69D196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E69C196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E69E196303E9001EE5B2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1F6E6B0196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F1F6E69F196303E9001EE5B2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1F6E6A4196303E9001EE5B2</string>
-				<string>F1F6E6A6196303E9001EE5B2</string>
-				<string>F1F6E6A5196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F1F6E6A0196303E9001EE5B2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1F6E6AE196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F1F6E6A1196303E9001EE5B2</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F1F6E6B6196303E9001EE5B2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F1F6E69E196303E9001EE5B2</string>
-				<string>F1F6E69F196303E9001EE5B2</string>
-				<string>F1F6E6A0196303E9001EE5B2</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>F1F6E6A8196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>AshaNet_iOSTests</string>
-			<key>productName</key>
-			<string>AshaNet_iOSTests</string>
-			<key>productReference</key>
-			<string>F1F6E6A2196303E9001EE5B2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>F1F6E6A2196303E9001EE5B2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>AshaNet_iOSTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F1F6E6A3196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>F1F6E6A4196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E6A3196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E6A5196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E68A196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E6A6196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E68E196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E6A7196303E9001EE5B2</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>F1F6E67F196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>F1F6E686196303E9001EE5B2</string>
-			<key>remoteInfo</key>
-			<string>AshaNet_iOS</string>
-		</dict>
-		<key>F1F6E6A8196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>F1F6E686196303E9001EE5B2</string>
-			<key>targetProxy</key>
-			<string>F1F6E6A7196303E9001EE5B2</string>
-		</dict>
-		<key>F1F6E6A9196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E6AF196303E9001EE5B2</string>
-				<string>F1F6E6AA196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>AshaNet_iOSTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E6AA196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E6AB196303E9001EE5B2</string>
-				<string>F1F6E6AC196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E6AB196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>AshaNet_iOSTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E6AC196303E9001EE5B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1F6E6AD196303E9001EE5B2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E6AD196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E6AE196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E6AC196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E6AF196303E9001EE5B2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AshaNet_iOSTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1F6E6B0196303E9001EE5B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F1F6E6AF196303E9001EE5B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1F6E6B1196303E9001EE5B2</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F1F6E6B2196303E9001EE5B2</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F1F6E6B3196303E9001EE5B2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F1F6E6B4196303E9001EE5B2</string>
-				<string>F1F6E6B5196303E9001EE5B2</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F1F6E6B4196303E9001EE5B2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BB214888FFFE4A15B579B7E6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>AshaNet_iOS/AshaNet_iOS-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>AshaNet_iOS/AshaNet_iOS-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F1F6E6B5196303E9001EE5B2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BB214888FFFE4A15B579B7E6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>AshaNet_iOS/AshaNet_iOS-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>AshaNet_iOS/AshaNet_iOS-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F1F6E6B6196303E9001EE5B2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F1F6E6B7196303E9001EE5B2</string>
-				<string>F1F6E6B8196303E9001EE5B2</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F1F6E6B7196303E9001EE5B2</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/AshaNet_iOS.app/AshaNet_iOS</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>AshaNet_iOS/AshaNet_iOS-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>AshaNet_iOSTests/AshaNet_iOSTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F1F6E6B8196303E9001EE5B2</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/AshaNet_iOS.app/AshaNet_iOS</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>AshaNet_iOS/AshaNet_iOS-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>AshaNet_iOSTests/AshaNet_iOSTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>F1F6E67F196303E9001EE5B2</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F38216A19686CA300C8AF42 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38216819686CA300C8AF42 /* ProjectsViewController.m */; };
+		9F38216B19686CA300C8AF42 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38216919686CA300C8AF42 /* ProjectsViewController.xib */; };
+		9F38216F19686CB500C8AF42 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38216D19686CB500C8AF42 /* EventsViewController.m */; };
+		9F38217019686CB500C8AF42 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38216E19686CB500C8AF42 /* EventsViewController.xib */; };
+		9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */; };
+		9F38217519686CD100C8AF42 /* GeneralDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */; };
+		B41C485B5E36413F827619DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA966DF4B42F42A3B1791AC3 /* libPods.a */; };
+		F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68A196303E9001EE5B2 /* Foundation.framework */; };
+		F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */; };
+		F1F6E68F196303E9001EE5B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68E196303E9001EE5B2 /* UIKit.framework */; };
+		F1F6E695196303E9001EE5B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1F6E693196303E9001EE5B2 /* InfoPlist.strings */; };
+		F1F6E697196303E9001EE5B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F6E696196303E9001EE5B2 /* main.m */; };
+		F1F6E69B196303E9001EE5B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F6E69A196303E9001EE5B2 /* AppDelegate.m */; };
+		F1F6E69D196303E9001EE5B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F6E69C196303E9001EE5B2 /* Images.xcassets */; };
+		F1F6E6A4196303E9001EE5B2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E6A3196303E9001EE5B2 /* XCTest.framework */; };
+		F1F6E6A5196303E9001EE5B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68A196303E9001EE5B2 /* Foundation.framework */; };
+		F1F6E6A6196303E9001EE5B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68E196303E9001EE5B2 /* UIKit.framework */; };
+		F1F6E6AE196303E9001EE5B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1F6E6AC196303E9001EE5B2 /* InfoPlist.strings */; };
+		F1F6E6B0196303E9001EE5B2 /* AshaNet_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F6E6AF196303E9001EE5B2 /* AshaNet_iOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1F6E6A7196303E9001EE5B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1F6E67F196303E9001EE5B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1F6E686196303E9001EE5B2;
+			remoteInfo = AshaNet_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F38216719686CA300C8AF42 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
+		9F38216819686CA300C8AF42 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
+		9F38216919686CA300C8AF42 /* ProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
+		9F38216C19686CB500C8AF42 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		9F38216D19686CB500C8AF42 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		9F38216E19686CB500C8AF42 /* EventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		9F38217119686CD100C8AF42 /* GeneralDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralDonateViewController.h; sourceTree = "<group>"; };
+		9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralDonateViewController.m; sourceTree = "<group>"; };
+		9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralDonateViewController.xib; sourceTree = "<group>"; };
+		AA966DF4B42F42A3B1791AC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F6E68A196303E9001EE5B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F1F6E68E196303E9001EE5B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F1F6E692196303E9001EE5B2 /* AshaNet_iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AshaNet_iOS-Info.plist"; sourceTree = "<group>"; };
+		F1F6E694196303E9001EE5B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F1F6E696196303E9001EE5B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1F6E698196303E9001EE5B2 /* AshaNet_iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AshaNet_iOS-Prefix.pch"; sourceTree = "<group>"; };
+		F1F6E699196303E9001EE5B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F1F6E69A196303E9001EE5B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F1F6E69C196303E9001EE5B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F1F6E6A2196303E9001EE5B2 /* AshaNet_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AshaNet_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F6E6A3196303E9001EE5B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F1F6E6AB196303E9001EE5B2 /* AshaNet_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AshaNet_iOSTests-Info.plist"; sourceTree = "<group>"; };
+		F1F6E6AD196303E9001EE5B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F1F6E6AF196303E9001EE5B2 /* AshaNet_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AshaNet_iOSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1F6E684196303E9001EE5B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */,
+				F1F6E68F196303E9001EE5B2 /* UIKit.framework in Frameworks */,
+				F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */,
+				B41C485B5E36413F827619DE /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1F6E69F196303E9001EE5B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F6E6A4196303E9001EE5B2 /* XCTest.framework in Frameworks */,
+				F1F6E6A6196303E9001EE5B2 /* UIKit.framework in Frameworks */,
+				F1F6E6A5196303E9001EE5B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1F6E67E196303E9001EE5B2 = {
+			isa = PBXGroup;
+			children = (
+				F1F6E690196303E9001EE5B2 /* AshaNet_iOS */,
+				F1F6E6A9196303E9001EE5B2 /* AshaNet_iOSTests */,
+				F1F6E689196303E9001EE5B2 /* Frameworks */,
+				F1F6E688196303E9001EE5B2 /* Products */,
+				BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		F1F6E688196303E9001EE5B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */,
+				F1F6E6A2196303E9001EE5B2 /* AshaNet_iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1F6E689196303E9001EE5B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1F6E68A196303E9001EE5B2 /* Foundation.framework */,
+				F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */,
+				F1F6E68E196303E9001EE5B2 /* UIKit.framework */,
+				F1F6E6A3196303E9001EE5B2 /* XCTest.framework */,
+				AA966DF4B42F42A3B1791AC3 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1F6E690196303E9001EE5B2 /* AshaNet_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F1F6E699196303E9001EE5B2 /* AppDelegate.h */,
+				F1F6E69A196303E9001EE5B2 /* AppDelegate.m */,
+				9F38216719686CA300C8AF42 /* ProjectsViewController.h */,
+				9F38216C19686CB500C8AF42 /* EventsViewController.h */,
+				9F38217119686CD100C8AF42 /* GeneralDonateViewController.h */,
+				9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */,
+				9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */,
+				9F38216D19686CB500C8AF42 /* EventsViewController.m */,
+				9F38216E19686CB500C8AF42 /* EventsViewController.xib */,
+				9F38216819686CA300C8AF42 /* ProjectsViewController.m */,
+				9F38216919686CA300C8AF42 /* ProjectsViewController.xib */,
+				F1F6E69C196303E9001EE5B2 /* Images.xcassets */,
+				F1F6E691196303E9001EE5B2 /* Supporting Files */,
+			);
+			path = AshaNet_iOS;
+			sourceTree = "<group>";
+		};
+		F1F6E691196303E9001EE5B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1F6E692196303E9001EE5B2 /* AshaNet_iOS-Info.plist */,
+				F1F6E693196303E9001EE5B2 /* InfoPlist.strings */,
+				F1F6E696196303E9001EE5B2 /* main.m */,
+				F1F6E698196303E9001EE5B2 /* AshaNet_iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1F6E6A9196303E9001EE5B2 /* AshaNet_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1F6E6AF196303E9001EE5B2 /* AshaNet_iOSTests.m */,
+				F1F6E6AA196303E9001EE5B2 /* Supporting Files */,
+			);
+			path = AshaNet_iOSTests;
+			sourceTree = "<group>";
+		};
+		F1F6E6AA196303E9001EE5B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1F6E6AB196303E9001EE5B2 /* AshaNet_iOSTests-Info.plist */,
+				F1F6E6AC196303E9001EE5B2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1F6E686196303E9001EE5B2 /* AshaNet_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1F6E6B3196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOS" */;
+			buildPhases = (
+				BF75801B78E64181BEC35014 /* Check Pods Manifest.lock */,
+				F1F6E683196303E9001EE5B2 /* Sources */,
+				F1F6E684196303E9001EE5B2 /* Frameworks */,
+				F1F6E685196303E9001EE5B2 /* Resources */,
+				06455DB77CA944C685283BC7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AshaNet_iOS;
+			productName = AshaNet_iOS;
+			productReference = F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1F6E6A1196303E9001EE5B2 /* AshaNet_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1F6E6B6196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOSTests" */;
+			buildPhases = (
+				F1F6E69E196303E9001EE5B2 /* Sources */,
+				F1F6E69F196303E9001EE5B2 /* Frameworks */,
+				F1F6E6A0196303E9001EE5B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1F6E6A8196303E9001EE5B2 /* PBXTargetDependency */,
+			);
+			name = AshaNet_iOSTests;
+			productName = AshaNet_iOSTests;
+			productReference = F1F6E6A2196303E9001EE5B2 /* AshaNet_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1F6E67F196303E9001EE5B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Patil, Sagar";
+				TargetAttributes = {
+					F1F6E6A1196303E9001EE5B2 = {
+						TestTargetID = F1F6E686196303E9001EE5B2;
+					};
+				};
+			};
+			buildConfigurationList = F1F6E682196303E9001EE5B2 /* Build configuration list for PBXProject "AshaNet_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F1F6E67E196303E9001EE5B2;
+			productRefGroup = F1F6E688196303E9001EE5B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1F6E686196303E9001EE5B2 /* AshaNet_iOS */,
+				F1F6E6A1196303E9001EE5B2 /* AshaNet_iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1F6E685196303E9001EE5B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F6E695196303E9001EE5B2 /* InfoPlist.strings in Resources */,
+				9F38217019686CB500C8AF42 /* EventsViewController.xib in Resources */,
+				9F38216B19686CA300C8AF42 /* ProjectsViewController.xib in Resources */,
+				F1F6E69D196303E9001EE5B2 /* Images.xcassets in Resources */,
+				9F38217519686CD100C8AF42 /* GeneralDonateViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1F6E6A0196303E9001EE5B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F6E6AE196303E9001EE5B2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06455DB77CA944C685283BC7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF75801B78E64181BEC35014 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1F6E683196303E9001EE5B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */,
+				F1F6E69B196303E9001EE5B2 /* AppDelegate.m in Sources */,
+				9F38216F19686CB500C8AF42 /* EventsViewController.m in Sources */,
+				9F38216A19686CA300C8AF42 /* ProjectsViewController.m in Sources */,
+				F1F6E697196303E9001EE5B2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1F6E69E196303E9001EE5B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F6E6B0196303E9001EE5B2 /* AshaNet_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1F6E6A8196303E9001EE5B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1F6E686196303E9001EE5B2 /* AshaNet_iOS */;
+			targetProxy = F1F6E6A7196303E9001EE5B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F1F6E693196303E9001EE5B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1F6E694196303E9001EE5B2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F1F6E6AC196303E9001EE5B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1F6E6AD196303E9001EE5B2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1F6E6B1196303E9001EE5B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F1F6E6B2196303E9001EE5B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1F6E6B4196303E9001EE5B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AshaNet_iOS/AshaNet_iOS-Prefix.pch";
+				INFOPLIST_FILE = "AshaNet_iOS/AshaNet_iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F1F6E6B5196303E9001EE5B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AshaNet_iOS/AshaNet_iOS-Prefix.pch";
+				INFOPLIST_FILE = "AshaNet_iOS/AshaNet_iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F1F6E6B7196303E9001EE5B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AshaNet_iOS.app/AshaNet_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AshaNet_iOS/AshaNet_iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AshaNet_iOSTests/AshaNet_iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F1F6E6B8196303E9001EE5B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AshaNet_iOS.app/AshaNet_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AshaNet_iOS/AshaNet_iOS-Prefix.pch";
+				INFOPLIST_FILE = "AshaNet_iOSTests/AshaNet_iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1F6E682196303E9001EE5B2 /* Build configuration list for PBXProject "AshaNet_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1F6E6B1196303E9001EE5B2 /* Debug */,
+				F1F6E6B2196303E9001EE5B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1F6E6B3196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1F6E6B4196303E9001EE5B2 /* Debug */,
+				F1F6E6B5196303E9001EE5B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1F6E6B6196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1F6E6B7196303E9001EE5B2 /* Debug */,
+				F1F6E6B8196303E9001EE5B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1F6E67F196303E9001EE5B2 /* Project object */;
+}
