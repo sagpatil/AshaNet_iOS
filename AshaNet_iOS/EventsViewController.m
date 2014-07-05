@@ -38,11 +38,13 @@
     UINib *EventCellNib = [UINib nibWithNibName:@"EventsTableViewCell" bundle:nil];
     [self.eventsTable registerNib:EventCellNib forCellReuseIdentifier:@"EventCell"];
     self.prototypeCell = [self.eventsTable dequeueReusableCellWithIdentifier:@"EventCell"];
+    
+    self.navigationItem.title = @"Events - Fundraisers";
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 5;
+    return 20;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
