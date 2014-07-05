@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PayPalMobile.h"
 
-@interface GeneralDonateViewController : UIViewController
+@interface GeneralDonateViewController : UIViewController <PayPalPaymentDelegate>
 
+@property(nonatomic, strong, readwrite) NSString *environment;
+@property(nonatomic, strong, readwrite) NSString *resultText;
 @end
