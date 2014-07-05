@@ -13,6 +13,10 @@
 		9F38217019686CB500C8AF42 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38216E19686CB500C8AF42 /* EventsViewController.xib */; };
 		9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */; };
 		9F38217519686CD100C8AF42 /* GeneralDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */; };
+		9F3821791968863B00C8AF42 /* ProjectsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3821771968863B00C8AF42 /* ProjectsTableViewCell.m */; };
+		9F38217A1968863B00C8AF42 /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3821781968863B00C8AF42 /* ProjectsTableViewCell.xib */; };
+		9F38217E1968864700C8AF42 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38217C1968864700C8AF42 /* EventsTableViewCell.m */; };
+		9F38217F1968864700C8AF42 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38217D1968864700C8AF42 /* EventsTableViewCell.xib */; };
 		B41C485B5E36413F827619DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA966DF4B42F42A3B1791AC3 /* libPods.a */; };
 		F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68A196303E9001EE5B2 /* Foundation.framework */; };
 		F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */; };
@@ -48,6 +52,12 @@
 		9F38217119686CD100C8AF42 /* GeneralDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralDonateViewController.h; sourceTree = "<group>"; };
 		9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralDonateViewController.m; sourceTree = "<group>"; };
 		9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralDonateViewController.xib; sourceTree = "<group>"; };
+		9F3821761968863B00C8AF42 /* ProjectsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsTableViewCell.h; sourceTree = "<group>"; };
+		9F3821771968863B00C8AF42 /* ProjectsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsTableViewCell.m; sourceTree = "<group>"; };
+		9F3821781968863B00C8AF42 /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
+		9F38217B1968864700C8AF42 /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
+		9F38217C1968864700C8AF42 /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
+		9F38217D1968864700C8AF42 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
 		AA966DF4B42F42A3B1791AC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +146,12 @@
 				9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */,
 				9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */,
 				9F38216D19686CB500C8AF42 /* EventsViewController.m */,
+				9F3821761968863B00C8AF42 /* ProjectsTableViewCell.h */,
+				9F3821771968863B00C8AF42 /* ProjectsTableViewCell.m */,
+				9F38217B1968864700C8AF42 /* EventsTableViewCell.h */,
+				9F38217C1968864700C8AF42 /* EventsTableViewCell.m */,
+				9F38217D1968864700C8AF42 /* EventsTableViewCell.xib */,
+				9F3821781968863B00C8AF42 /* ProjectsTableViewCell.xib */,
 				9F38216E19686CB500C8AF42 /* EventsViewController.xib */,
 				9F38216819686CA300C8AF42 /* ProjectsViewController.m */,
 				9F38216919686CA300C8AF42 /* ProjectsViewController.xib */,
@@ -253,9 +269,11 @@
 			files = (
 				F1F6E695196303E9001EE5B2 /* InfoPlist.strings in Resources */,
 				9F38217019686CB500C8AF42 /* EventsViewController.xib in Resources */,
+				9F38217F1968864700C8AF42 /* EventsTableViewCell.xib in Resources */,
 				9F38216B19686CA300C8AF42 /* ProjectsViewController.xib in Resources */,
 				F1F6E69D196303E9001EE5B2 /* Images.xcassets in Resources */,
 				9F38217519686CD100C8AF42 /* GeneralDonateViewController.xib in Resources */,
+				9F38217A1968863B00C8AF42 /* ProjectsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */,
+				9F38217E1968864700C8AF42 /* EventsTableViewCell.m in Sources */,
+				9F3821791968863B00C8AF42 /* ProjectsTableViewCell.m in Sources */,
 				F1F6E69B196303E9001EE5B2 /* AppDelegate.m in Sources */,
 				9F38216F19686CB500C8AF42 /* EventsViewController.m in Sources */,
 				9F38216A19686CA300C8AF42 /* ProjectsViewController.m in Sources */,
