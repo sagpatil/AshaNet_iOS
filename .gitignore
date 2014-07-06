@@ -25,3 +25,5 @@ build/
 *.dep
 
 Pods
+AshaNet_iOS.xcworkspace/xcuserdata/sagpatil.xcuserdatad/UserInterfaceState.xcuserstate
+Pods/Pods.xcodeproj/xcuserdata/sagpatil.xcuserdatad/xcschemes/xcschememanagement.plist

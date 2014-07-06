@@ -19,4 +19,6 @@
 @property (nonatomic, strong) PFFile *eventImage;
 @property (nonatomic, strong) NSDictionary *pricingInfo;
 
+
+- (id)initWithDictionary:(NSDictionary *)object;
 @end
