@@ -22,6 +22,7 @@ static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [Parse setApplicationId:KApp_id clientKey:KClient_Key];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     ProjectsViewController *pvc = [[ProjectsViewController alloc] init];
     EventsViewController *evc = [[EventsViewController alloc] init];

@@ -9,7 +9,7 @@
 #import "GeneralDonateViewController.h"
  #import <QuartzCore/QuartzCore.h>
 #import "PayPalConfig.h"
-
+#import <Parse/Parse.h>
 
 
 static NSString *kSandboxClientId = @"ARmjaBDYxJcXYErMEQdaCnvE5h4vgYxtS9XJo7OTi_ZohebxT7qvMsC-1Vml";
@@ -26,9 +26,9 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 
 
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
-@property (strong, nonatomic)          NSArray *chapterArray;
-@property (strong, nonatomic)NSString * chapterToDonateTo;
-
+@property (strong, nonatomic) NSMutableArray *chapterArray;
+@property (strong, nonatomic) NSString * chapterToDonateTo;
+@property (nonatomic, strong) NSNumber *donationAmount;
 @end
 
 @implementation GeneralDonateViewController
@@ -37,7 +37,7 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.chapterArray = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -56,8 +56,9 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     
     self.successView.hidden = YES;
     
+    [self loadChapters];
     ///#TODO update the array form list of chapters coming from PArse
-    self.chapterArray  = [[NSArray alloc]         initWithObjects:@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
+//    self.chapterArray  = [[NSArray alloc] initWithObjects:@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
     self.chapterPickerView.delegate = self;
     self.chapterPickerView.dataSource = self;
     self.chapterPickerView.showsSelectionIndicator = YES;
@@ -92,13 +93,11 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     
  
     NSDecimalNumber *total = [NSDecimalNumber decimalNumberWithString:self.donationAmountTextField.text];
-    if ([[NSDecimalNumber notANumber] isEqualToNumber:total])
-    {
+    if ([[NSDecimalNumber notANumber] isEqualToNumber:total]){
         NSLog(@"Not a valid nuber entered");
         [message show];
         return;
     }
-    
     else if (total.floatValue <= 0){
         NSLog(@"Amount Less than 0");
         [message show];
@@ -106,23 +105,16 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     }
     
     self.chapterPickerView.hidden=YES;
-
-    
-    //#TODO  Find a pay to send the chapter donated to the Paypal as transaction parameter (self.chapterToDonateTo will comtain value to be sent)
+    self.donationAmount = total;
     
     PayPalPayment *payment = [[PayPalPayment alloc] init];
     payment.amount = total;
     payment.currencyCode = @"USD";
-    payment.shortDescription = @"Donation towards Ashanet";
+    payment.shortDescription = [NSString stringWithFormat:@"Donation to %@ chapter of Ashanet",self.chapterToDonateTo];
     payment.intent = PayPalPaymentIntentSale;
     
     if (!payment.processable) {
-        
         NSLog(@"Payment not processable");
-        // This particular payment will always be processable. If, for
-        // example, the amount was negative or the shortDescription was
-        // empty, this payment wouldn't be processable, and you'd want
-        // to handle that here.
     }
     PayPalPaymentViewController *paymentViewController = [[PayPalPaymentViewController alloc] initWithPayment:payment
                                                                                                 configuration:self.payPalConfig
@@ -139,22 +131,18 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
-     NSLog(@"Selected Row %d", row);
+     NSLog(@"Selected Row %d",row);
     self.chapterToDonateTo = self.chapterArray[row];
     self.selectedChapterLabel.text = self.chapterToDonateTo;
 }
 
-// returns the number of 'columns' to display.
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
-    
 }
 
-// returns the # of rows in each component..
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
-{
-    return 6;
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component{
+    return self.chapterArray.count;
     
 }
 
@@ -182,8 +170,13 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 #pragma mark Proof of payment validation
 
 - (void)sendCompletedPaymentToServer:(PayPalPayment *)completedPayment {
-    // TODO: Send completedPayment.confirmation to server
     NSLog(@"Here is your proof of payment:\n\n%@\n\nSend this to your Parse.com for confirmation and fulfillment.", completedPayment.confirmation);
+    NSDictionary *response = (NSDictionary*)completedPayment.confirmation;
+    PFObject *donation = [PFObject objectWithClassName:@"Donations"];
+    donation[@"donation_amount"] = self.donationAmount;
+    donation[@"chapter"] = self.chapterToDonateTo;
+    donation[@"paypal_confirmation_id"] = response[@"response"][@"id"];
+    [donation saveInBackground];
 }
 
 
@@ -215,7 +208,16 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     [self resignFirstResponder];
     [self.selectedChapterLabel becomeFirstResponder];
     self.chapterPickerView.hidden = NO;
-//    self.selectedChapterLabel.text = self.chapterArray[0];
 }
 
+
+- (void)loadChapters{
+    PFQuery *query = [PFQuery queryWithClassName:@"Chapter"];
+    // Blocking call will block the thread till this network call is executed
+    NSArray *objects = [query findObjects];
+    for (PFObject *object in objects) {
+        NSLog(@"%@", object[@"name"]);
+        [self.chapterArray addObject:object[@"name"]];
+    }
+}
 @end
