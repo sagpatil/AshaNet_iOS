@@ -21,9 +21,8 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 @property (weak, nonatomic) IBOutlet UITextField *donationAmountTextField;
 @property (weak, nonatomic) IBOutlet UIButton *donateButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *chapterPickerView;
-@property (weak, nonatomic) IBOutlet UIButton *selectChapterButton;
-- (IBAction)onSelectChapterTap:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *selectedChapterLabel;
 
 
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
@@ -50,6 +49,11 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     PayPalConfig *PPconfig  = [PayPalConfig sharedConfig];
     [PPconfig setupForTakingPayments];
     
+    UITapGestureRecognizer *tapGesture =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
+    [self.selectedChapterLabel addGestureRecognizer:tapGesture];
+    
+    
     self.successView.hidden = YES;
     
     ///#TODO update the array form list of chapters coming from PArse
@@ -59,12 +63,12 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     self.chapterPickerView.showsSelectionIndicator = YES;
     self.chapterPickerView.hidden = YES;
     
-    //add border to the button
-    CALayer * layer = [self.selectChapterButton layer];
+    //add border to the Label
+    CALayer * layer = [self.selectedChapterLabel layer];
     [layer setMasksToBounds:YES];
-    [layer setCornerRadius:0.0]; //when radius is 0, the border is a rectangle
-    [layer setBorderWidth:1.0];
-    [layer setBorderColor:[[UIColor grayColor] CGColor]];
+    [layer setCornerRadius:5.0]; //when radius is 0, the border is a rectangle
+    [layer setBorderWidth:0.5];
+    [layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +83,6 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 
    
     [self resignFirstResponder];
-    self.chapterPickerView.hidden=YES;
     self.resultText = nil;
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Invalid amount"
                                                       message:@"Please enter a valid value greater than 0"
@@ -102,6 +105,8 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
         return;
     }
     
+    self.chapterPickerView.hidden=YES;
+
     
     //#TODO  Find a pay to send the chapter donated to the Paypal as transaction parameter (self.chapterToDonateTo will comtain value to be sent)
     
@@ -136,7 +141,7 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 {
      NSLog(@"Selected Row %d", row);
     self.chapterToDonateTo = self.chapterArray[row];
-    self.selectChapterButton.titleLabel.text = self.chapterToDonateTo;
+    self.selectedChapterLabel.text = self.chapterToDonateTo;
 }
 
 // returns the number of 'columns' to display.
@@ -160,7 +165,9 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     NSLog(@"PayPal Payment Success!");
     self.resultText = [completedPayment description];
     [self showSuccess];
+    self.chapterPickerView.hidden = YES;
     self.donationAmountTextField.text = @"";
+    self.selectedChapterLabel.text = @"Tap to Select";
     [self sendCompletedPaymentToServer:completedPayment]; // Payment was processed successfully; send to server for verification and fulfillment
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -194,7 +201,21 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 }
 
 
-- (IBAction)onSelectChapterTap:(id)sender {
-    self.chapterPickerView.hidden = NO;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    NSLog(@"TOUch ");
+    if ([self.donationAmountTextField isFirstResponder] && [touch view] != self.donationAmountTextField) {
+        [self.donationAmountTextField resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
 }
+
+- (void)labelTap{
+    [self resignFirstResponder];
+    [self.selectedChapterLabel becomeFirstResponder];
+    self.chapterPickerView.hidden = NO;
+//    self.selectedChapterLabel.text = self.chapterArray[0];
+}
+
 @end
