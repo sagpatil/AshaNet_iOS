@@ -25,6 +25,7 @@
 		F126273619687C9C00CC6544 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273519687C9C00CC6544 /* CoreLocation.framework */; };
 		F126273819687CA200CC6544 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273719687CA200CC6544 /* MessageUI.framework */; };
 		F126273A19687CAB00CC6544 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273919687CAB00CC6544 /* SystemConfiguration.framework */; };
+		F1E19BEE1968D217005D5216 /* PayPalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E19BED1968D217005D5216 /* PayPalConfig.m */; };
 		F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68A196303E9001EE5B2 /* Foundation.framework */; };
 		F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */; };
 		F1F6E68F196303E9001EE5B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68E196303E9001EE5B2 /* UIKit.framework */; };
@@ -80,6 +81,8 @@
 		F126273519687C9C00CC6544 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F126273719687CA200CC6544 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F126273919687CAB00CC6544 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F1E19BEC1968D217005D5216 /* PayPalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfig.h; sourceTree = "<group>"; };
+		F1E19BED1968D217005D5216 /* PayPalConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPalConfig.m; sourceTree = "<group>"; };
 		F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F6E68A196303E9001EE5B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,15 @@
 			path = PayPalMobile;
 			sourceTree = "<group>";
 		};
+		F1E19BEB1968D1BD005D5216 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1E19BEC1968D217005D5216 /* PayPalConfig.h */,
+				F1E19BED1968D217005D5216 /* PayPalConfig.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		F1F6E67E196303E9001EE5B2 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +193,7 @@
 		F1F6E690196303E9001EE5B2 /* AshaNet_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F1E19BEB1968D1BD005D5216 /* Models */,
 				F1F6E699196303E9001EE5B2 /* AppDelegate.h */,
 				F1F6E69A196303E9001EE5B2 /* AppDelegate.m */,
 				9F38216719686CA300C8AF42 /* ProjectsViewController.h */,
@@ -373,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */,
+				F1E19BEE1968D217005D5216 /* PayPalConfig.m in Sources */,
 				9F38217E1968864700C8AF42 /* EventsTableViewCell.m in Sources */,
 				9F3821791968863B00C8AF42 /* ProjectsTableViewCell.m in Sources */,
 				F1F6E69B196303E9001EE5B2 /* AppDelegate.m in Sources */,

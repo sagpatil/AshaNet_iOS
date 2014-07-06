@@ -7,13 +7,10 @@
 //
 
 #import "GeneralDonateViewController.h"
+ #import <QuartzCore/QuartzCore.h>
+#import "PayPalConfig.h"
 
 
-// Set the environment:
-// - For live charges, use PayPalEnvironmentProduction (default).
-// - To use the PayPal sandbox, use PayPalEnvironmentSandbox.
-// - For testing, use PayPalEnvironmentNoNetwork.
-#define kPayPalEnvironment PayPalEnvironmentNoNetwork
 
 static NSString *kSandboxClientId = @"ARmjaBDYxJcXYErMEQdaCnvE5h4vgYxtS9XJo7OTi_ZohebxT7qvMsC-1Vml";
 static NSString *kProductionClientId = @"Add Production key here for ASha";
@@ -23,8 +20,15 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 @property (weak, nonatomic) IBOutlet UIView *successView;
 @property (weak, nonatomic) IBOutlet UITextField *donationAmountTextField;
 @property (weak, nonatomic) IBOutlet UIButton *donateButton;
+@property (weak, nonatomic) IBOutlet UIPickerView *chapterPickerView;
+@property (weak, nonatomic) IBOutlet UIButton *selectChapterButton;
+- (IBAction)onSelectChapterTap:(id)sender;
+
+
 
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
+@property (strong, nonatomic)          NSArray *chapterArray;
+@property (strong, nonatomic)NSString * chapterToDonateTo;
 
 @end
 
@@ -42,36 +46,26 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Set up payPalConfig
-    self.payPalConfig = [[PayPalConfiguration alloc] init];
-    self.payPalConfig.acceptCreditCards = YES;
-    self.payPalConfig.languageOrLocale = @"en";
-    self.payPalConfig.merchantName = @"AshaNet.Org";
-    self.payPalConfig.merchantPrivacyPolicyURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/privacy-full"];
-    self.payPalConfig.merchantUserAgreementURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/useragreement-full"];
-    self.payPalConfig.languageOrLocale = [NSLocale preferredLanguages][0];
     
-    // Do any additional setup after loading the view, typically from a nib.
+    PayPalConfig *PPconfig  = [PayPalConfig sharedConfig];
+    [PPconfig setupForTakingPayments];
     
     self.successView.hidden = YES;
     
-    // use default environment, should be Production in real life
-    self.environment = kPayPalEnvironment;
-
+    ///#TODO update the array form list of chapters coming from PArse
+    self.chapterArray  = [[NSArray alloc]         initWithObjects:@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
+    self.chapterPickerView.delegate = self;
+    self.chapterPickerView.dataSource = self;
+    self.chapterPickerView.showsSelectionIndicator = YES;
+    self.chapterPickerView.hidden = YES;
+    
+    //add border to the button
+    CALayer * layer = [self.selectChapterButton layer];
+    [layer setMasksToBounds:YES];
+    [layer setCornerRadius:0.0]; //when radius is 0, the border is a rectangle
+    [layer setBorderWidth:1.0];
+    [layer setBorderColor:[[UIColor grayColor] CGColor]];
 }
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    
-     NSDictionary *keys =  @{PayPalEnvironmentProduction : kProductionClientId,
-                             PayPalEnvironmentSandbox : kSandboxClientId};
-    
-    [PayPalMobile initializeWithClientIdsForEnvironments:keys];
-    
-    // Preconnect to PayPal early
-    [PayPalMobile preconnectWithEnvironment:self.environment];
-}
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -79,9 +73,13 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Donate Button action
 - (IBAction)onDonateTap:(id)sender {
-    
-    // Remove our last completed payment, just for demo purposes.
+   
+
+   
+    [self resignFirstResponder];
+    self.chapterPickerView.hidden=YES;
     self.resultText = nil;
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Invalid amount"
                                                       message:@"Please enter a valid value greater than 0"
@@ -99,11 +97,13 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     }
     
     else if (total.floatValue <= 0){
-        NSLog(@"Amount Less than 0");        
+        NSLog(@"Amount Less than 0");
         [message show];
         return;
     }
     
+    
+    //#TODO  Find a pay to send the chapter donated to the Paypal as transaction parameter (self.chapterToDonateTo will comtain value to be sent)
     
     PayPalPayment *payment = [[PayPalPayment alloc] init];
     payment.amount = total;
@@ -124,6 +124,33 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
                                                                                                      delegate:self];
     [self presentViewController:paymentViewController animated:YES completion:nil];
 
+}
+
+#pragma mark - UIPicker View methods
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
+{
+    return [self.chapterArray objectAtIndex:row];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
+{
+     NSLog(@"Selected Row %d", row);
+    self.chapterToDonateTo = self.chapterArray[row];
+    self.selectChapterButton.titleLabel.text = self.chapterToDonateTo;
+}
+
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+    
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
+{
+    return 6;
+    
 }
 
 
@@ -166,4 +193,8 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     [UIView commitAnimations];
 }
 
+
+- (IBAction)onSelectChapterTap:(id)sender {
+    self.chapterPickerView.hidden = NO;
+}
 @end
