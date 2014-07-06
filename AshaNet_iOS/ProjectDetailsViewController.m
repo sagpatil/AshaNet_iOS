@@ -38,8 +38,11 @@
 {
     NSMutableArray *sharingItems = [NSMutableArray new];
     
-    [sharingItems addObject:@"Project information"];
-    [sharingItems addObject:@"http://www.ashanet.org/projects/project-view.php?p=855"];
+    
+    NSArray *lines = @[@"Asha for Education \n Project information", @"http://www.ashanet.org/projects/project-view.php?p=855"];
+    NSString *linesString = [lines componentsJoinedByString:@"\n\n"];
+    
+    [sharingItems addObject: linesString];
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];
     [self presentViewController:activityController animated:YES completion:nil];

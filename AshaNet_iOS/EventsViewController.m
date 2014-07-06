@@ -8,6 +8,7 @@
 
 #import "EventsViewController.h"
 #import "EventsTableViewCell.h"
+#import "EventDetailsViewController.h"
 #import <Parse/Parse.h>
 
 @interface EventsViewController ()
@@ -52,12 +53,20 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Row..... %i", indexPath.row);
     EventsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell" forIndexPath:indexPath];
     [cell customizeCell:self.events[indexPath.row]];
     return cell;
 }
 
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+    Event *evt = self.events[indexPath.row];
+    
+    [self.eventsTable deselectRowAtIndexPath:indexPath animated:NO];
+    EventDetailsViewController *edvc = [[EventDetailsViewController alloc]init];
+    edvc.selectedEvent = evt;
+    edvc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:edvc animated:YES];
+}
 
 #pragma  mark - Helper methods
 

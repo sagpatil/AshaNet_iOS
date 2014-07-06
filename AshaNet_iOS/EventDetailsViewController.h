@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
 @interface EventDetailsViewController : UIViewController
+
+@property (strong, nonatomic, readwrite) Event *selectedEvent;
 
 @end
