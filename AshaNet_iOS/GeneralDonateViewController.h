@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PayPalMobile.h"
 
-@interface GeneralDonateViewController : UIViewController <PayPalPaymentDelegate>
+@interface GeneralDonateViewController : UIViewController <PayPalPaymentDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property(nonatomic, strong, readwrite) NSString *environment;
 @property(nonatomic, strong, readwrite) NSString *resultText;
