@@ -7,260 +7,268 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F38216A19686CA300C8AF42 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38216819686CA300C8AF42 /* ProjectsViewController.m */; };
-		9F38216B19686CA300C8AF42 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38216919686CA300C8AF42 /* ProjectsViewController.xib */; };
-		9F38216F19686CB500C8AF42 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38216D19686CB500C8AF42 /* EventsViewController.m */; };
-		9F38217019686CB500C8AF42 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38216E19686CB500C8AF42 /* EventsViewController.xib */; };
-		9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */; };
-		9F38217519686CD100C8AF42 /* GeneralDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */; };
-		9F3821791968863B00C8AF42 /* ProjectsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3821771968863B00C8AF42 /* ProjectsTableViewCell.m */; };
-		9F38217A1968863B00C8AF42 /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3821781968863B00C8AF42 /* ProjectsTableViewCell.xib */; };
-		9F38217E1968864700C8AF42 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38217C1968864700C8AF42 /* EventsTableViewCell.m */; };
-		9F38217F1968864700C8AF42 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38217D1968864700C8AF42 /* EventsTableViewCell.xib */; };
-		9F3821831968B19200C8AF42 /* ProjectDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3821811968B19200C8AF42 /* ProjectDetailsViewController.m */; };
-		9F3821841968B19200C8AF42 /* ProjectDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3821821968B19200C8AF42 /* ProjectDetailsViewController.xib */; };
-		B41C485B5E36413F827619DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA966DF4B42F42A3B1791AC3 /* libPods.a */; };
-		F12627321968788E00CC6544 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F126272C1968788E00CC6544 /* libPayPalMobile.a */; };
-		F126273419687C8E00CC6544 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273319687C8E00CC6544 /* AVFoundation.framework */; };
-		F126273619687C9C00CC6544 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273519687C9C00CC6544 /* CoreLocation.framework */; };
-		F126273819687CA200CC6544 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273719687CA200CC6544 /* MessageUI.framework */; };
-		F126273A19687CAB00CC6544 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F126273919687CAB00CC6544 /* SystemConfiguration.framework */; };
-		F1E19BEE1968D217005D5216 /* PayPalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E19BED1968D217005D5216 /* PayPalConfig.m */; };
-		F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68A196303E9001EE5B2 /* Foundation.framework */; };
-		F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */; };
-		F1F6E68F196303E9001EE5B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68E196303E9001EE5B2 /* UIKit.framework */; };
-		F1F6E695196303E9001EE5B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1F6E693196303E9001EE5B2 /* InfoPlist.strings */; };
-		F1F6E697196303E9001EE5B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F6E696196303E9001EE5B2 /* main.m */; };
-		F1F6E69B196303E9001EE5B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F6E69A196303E9001EE5B2 /* AppDelegate.m */; };
-		F1F6E69D196303E9001EE5B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F6E69C196303E9001EE5B2 /* Images.xcassets */; };
-		F1F6E6A4196303E9001EE5B2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E6A3196303E9001EE5B2 /* XCTest.framework */; };
-		F1F6E6A5196303E9001EE5B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68A196303E9001EE5B2 /* Foundation.framework */; };
-		F1F6E6A6196303E9001EE5B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F6E68E196303E9001EE5B2 /* UIKit.framework */; };
-		F1F6E6AE196303E9001EE5B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1F6E6AC196303E9001EE5B2 /* InfoPlist.strings */; };
-		F1F6E6B0196303E9001EE5B2 /* AshaNet_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F6E6AF196303E9001EE5B2 /* AshaNet_iOSTests.m */; };
+		117F1981A0DE4396BD95455E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 553BF50067E04585B13E0344 /* libPods.a */; };
+		F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
+		F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743601968F3D200F0FC23 /* CoreGraphics.framework */; };
+		F1E743631968F3D200F0FC23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743621968F3D200F0FC23 /* UIKit.framework */; };
+		F1E743691968F3D200F0FC23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1E743671968F3D200F0FC23 /* InfoPlist.strings */; };
+		F1E7436B1968F3D200F0FC23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7436A1968F3D200F0FC23 /* main.m */; };
+		F1E7436F1968F3D200F0FC23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7436E1968F3D200F0FC23 /* AppDelegate.m */; };
+		F1E743711968F3D200F0FC23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E743701968F3D200F0FC23 /* Images.xcassets */; };
+		F1E743781968F3D200F0FC23 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743771968F3D200F0FC23 /* XCTest.framework */; };
+		F1E743791968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
+		F1E7437A1968F3D200F0FC23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743621968F3D200F0FC23 /* UIKit.framework */; };
+		F1E743821968F3D200F0FC23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1E743801968F3D200F0FC23 /* InfoPlist.strings */; };
+		F1E743841968F3D200F0FC23 /* AshaNet_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743831968F3D200F0FC23 /* AshaNet_iOSTests.m */; };
+		F1E743941968F4FB00F0FC23 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7438E1968F4FB00F0FC23 /* libPayPalMobile.a */; };
+		F1E743AF1968F63F00F0FC23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1E743961968F63F00F0FC23 /* InfoPlist.strings */; };
+		F1E743B01968F63F00F0FC23 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743991968F63F00F0FC23 /* Event.m */; };
+		F1E743B11968F63F00F0FC23 /* EventsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7439B1968F63F00F0FC23 /* EventsTableViewCell.m */; };
+		F1E743B21968F63F00F0FC23 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E7439C1968F63F00F0FC23 /* EventsTableViewCell.xib */; };
+		F1E743B31968F63F00F0FC23 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7439E1968F63F00F0FC23 /* EventsViewController.m */; };
+		F1E743B41968F63F00F0FC23 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E7439F1968F63F00F0FC23 /* EventsViewController.xib */; };
+		F1E743B51968F63F00F0FC23 /* GeneralDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743A11968F63F00F0FC23 /* GeneralDonateViewController.m */; };
+		F1E743B61968F63F00F0FC23 /* GeneralDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E743A21968F63F00F0FC23 /* GeneralDonateViewController.xib */; };
+		F1E743B81968F63F00F0FC23 /* PayPalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743A51968F63F00F0FC23 /* PayPalConfig.m */; };
+		F1E743B91968F63F00F0FC23 /* ProjectDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743A71968F63F00F0FC23 /* ProjectDetailsViewController.m */; };
+		F1E743BA1968F63F00F0FC23 /* ProjectDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E743A81968F63F00F0FC23 /* ProjectDetailsViewController.xib */; };
+		F1E743BB1968F63F00F0FC23 /* ProjectsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743AA1968F63F00F0FC23 /* ProjectsTableViewCell.m */; };
+		F1E743BC1968F63F00F0FC23 /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E743AB1968F63F00F0FC23 /* ProjectsTableViewCell.xib */; };
+		F1E743BD1968F63F00F0FC23 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */; };
+		F1E743BE1968F63F00F0FC23 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F1F6E6A7196303E9001EE5B2 /* PBXContainerItemProxy */ = {
+		F1E7437B1968F3D200F0FC23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F1F6E67F196303E9001EE5B2 /* Project object */;
+			containerPortal = F1E743531968F3D200F0FC23 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F1F6E686196303E9001EE5B2;
+			remoteGlobalIDString = F1E7435A1968F3D200F0FC23;
 			remoteInfo = AshaNet_iOS;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F38216719686CA300C8AF42 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
-		9F38216819686CA300C8AF42 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
-		9F38216919686CA300C8AF42 /* ProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
-		9F38216C19686CB500C8AF42 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		9F38216D19686CB500C8AF42 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
-		9F38216E19686CB500C8AF42 /* EventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
-		9F38217119686CD100C8AF42 /* GeneralDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralDonateViewController.h; sourceTree = "<group>"; };
-		9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralDonateViewController.m; sourceTree = "<group>"; };
-		9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralDonateViewController.xib; sourceTree = "<group>"; };
-		9F3821761968863B00C8AF42 /* ProjectsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsTableViewCell.h; sourceTree = "<group>"; };
-		9F3821771968863B00C8AF42 /* ProjectsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsTableViewCell.m; sourceTree = "<group>"; };
-		9F3821781968863B00C8AF42 /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
-		9F38217B1968864700C8AF42 /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
-		9F38217C1968864700C8AF42 /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
-		9F38217D1968864700C8AF42 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
-		9F3821801968B19200C8AF42 /* ProjectDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailsViewController.h; sourceTree = "<group>"; };
-		9F3821811968B19200C8AF42 /* ProjectDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailsViewController.m; sourceTree = "<group>"; };
-		9F3821821968B19200C8AF42 /* ProjectDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDetailsViewController.xib; sourceTree = "<group>"; };
-		AA966DF4B42F42A3B1791AC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		F126272C1968788E00CC6544 /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
-		F126272D1968788E00CC6544 /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
-		F126272E1968788E00CC6544 /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
-		F126272F1968788E00CC6544 /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
-		F12627301968788E00CC6544 /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
-		F12627311968788E00CC6544 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
-		F126273319687C8E00CC6544 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		F126273519687C9C00CC6544 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F126273719687CA200CC6544 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		F126273919687CAB00CC6544 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		F1E19BEC1968D217005D5216 /* PayPalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfig.h; sourceTree = "<group>"; };
-		F1E19BED1968D217005D5216 /* PayPalConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPalConfig.m; sourceTree = "<group>"; };
-		F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1F6E68A196303E9001EE5B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F1F6E68E196303E9001EE5B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F1F6E692196303E9001EE5B2 /* AshaNet_iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AshaNet_iOS-Info.plist"; sourceTree = "<group>"; };
-		F1F6E694196303E9001EE5B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F1F6E696196303E9001EE5B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F1F6E698196303E9001EE5B2 /* AshaNet_iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AshaNet_iOS-Prefix.pch"; sourceTree = "<group>"; };
-		F1F6E699196303E9001EE5B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F1F6E69A196303E9001EE5B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F1F6E69C196303E9001EE5B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F1F6E6A2196303E9001EE5B2 /* AshaNet_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AshaNet_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1F6E6A3196303E9001EE5B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F1F6E6AB196303E9001EE5B2 /* AshaNet_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AshaNet_iOSTests-Info.plist"; sourceTree = "<group>"; };
-		F1F6E6AD196303E9001EE5B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F1F6E6AF196303E9001EE5B2 /* AshaNet_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AshaNet_iOSTests.m; sourceTree = "<group>"; };
+		4C294B4DC82349AB94CA8F7D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		553BF50067E04585B13E0344 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E7435E1968F3D200F0FC23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F1E743601968F3D200F0FC23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F1E743621968F3D200F0FC23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F1E743661968F3D200F0FC23 /* AshaNet_iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AshaNet_iOS-Info.plist"; sourceTree = "<group>"; };
+		F1E743681968F3D200F0FC23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F1E7436A1968F3D200F0FC23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1E7436C1968F3D200F0FC23 /* AshaNet_iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AshaNet_iOS-Prefix.pch"; sourceTree = "<group>"; };
+		F1E7436D1968F3D200F0FC23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F1E7436E1968F3D200F0FC23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F1E743701968F3D200F0FC23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F1E743761968F3D200F0FC23 /* AshaNet_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AshaNet_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E743771968F3D200F0FC23 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F1E7437F1968F3D200F0FC23 /* AshaNet_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AshaNet_iOSTests-Info.plist"; sourceTree = "<group>"; };
+		F1E743811968F3D200F0FC23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F1E743831968F3D200F0FC23 /* AshaNet_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AshaNet_iOSTests.m; sourceTree = "<group>"; };
+		F1E7438E1968F4FB00F0FC23 /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		F1E7438F1968F4FB00F0FC23 /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
+		F1E743901968F4FB00F0FC23 /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		F1E743911968F4FB00F0FC23 /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		F1E743921968F4FB00F0FC23 /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		F1E743931968F4FB00F0FC23 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		F1E743971968F63F00F0FC23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		F1E743981968F63F00F0FC23 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		F1E743991968F63F00F0FC23 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		F1E7439A1968F63F00F0FC23 /* EventsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewCell.h; sourceTree = "<group>"; };
+		F1E7439B1968F63F00F0FC23 /* EventsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewCell.m; sourceTree = "<group>"; };
+		F1E7439C1968F63F00F0FC23 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		F1E7439D1968F63F00F0FC23 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		F1E7439E1968F63F00F0FC23 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		F1E7439F1968F63F00F0FC23 /* EventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		F1E743A01968F63F00F0FC23 /* GeneralDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralDonateViewController.h; sourceTree = "<group>"; };
+		F1E743A11968F63F00F0FC23 /* GeneralDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralDonateViewController.m; sourceTree = "<group>"; };
+		F1E743A21968F63F00F0FC23 /* GeneralDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralDonateViewController.xib; sourceTree = "<group>"; };
+		F1E743A41968F63F00F0FC23 /* PayPalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfig.h; sourceTree = "<group>"; };
+		F1E743A51968F63F00F0FC23 /* PayPalConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPalConfig.m; sourceTree = "<group>"; };
+		F1E743A61968F63F00F0FC23 /* ProjectDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailsViewController.h; sourceTree = "<group>"; };
+		F1E743A71968F63F00F0FC23 /* ProjectDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailsViewController.m; sourceTree = "<group>"; };
+		F1E743A81968F63F00F0FC23 /* ProjectDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDetailsViewController.xib; sourceTree = "<group>"; };
+		F1E743A91968F63F00F0FC23 /* ProjectsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsTableViewCell.h; sourceTree = "<group>"; };
+		F1E743AA1968F63F00F0FC23 /* ProjectsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsTableViewCell.m; sourceTree = "<group>"; };
+		F1E743AB1968F63F00F0FC23 /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
+		F1E743AC1968F63F00F0FC23 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
+		F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
+		F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F1F6E684196303E9001EE5B2 /* Frameworks */ = {
+		F1E743581968F3D200F0FC23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F126273A19687CAB00CC6544 /* SystemConfiguration.framework in Frameworks */,
-				F126273819687CA200CC6544 /* MessageUI.framework in Frameworks */,
-				F126273619687C9C00CC6544 /* CoreLocation.framework in Frameworks */,
-				F126273419687C8E00CC6544 /* AVFoundation.framework in Frameworks */,
-				F1F6E68D196303E9001EE5B2 /* CoreGraphics.framework in Frameworks */,
-				F1F6E68F196303E9001EE5B2 /* UIKit.framework in Frameworks */,
-				F1F6E68B196303E9001EE5B2 /* Foundation.framework in Frameworks */,
-				F12627321968788E00CC6544 /* libPayPalMobile.a in Frameworks */,
-				B41C485B5E36413F827619DE /* libPods.a in Frameworks */,
+				F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */,
+				F1E743631968F3D200F0FC23 /* UIKit.framework in Frameworks */,
+				F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */,
+				F1E743941968F4FB00F0FC23 /* libPayPalMobile.a in Frameworks */,
+				117F1981A0DE4396BD95455E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1F6E69F196303E9001EE5B2 /* Frameworks */ = {
+		F1E743731968F3D200F0FC23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F6E6A4196303E9001EE5B2 /* XCTest.framework in Frameworks */,
-				F1F6E6A6196303E9001EE5B2 /* UIKit.framework in Frameworks */,
-				F1F6E6A5196303E9001EE5B2 /* Foundation.framework in Frameworks */,
+				F1E743781968F3D200F0FC23 /* XCTest.framework in Frameworks */,
+				F1E7437A1968F3D200F0FC23 /* UIKit.framework in Frameworks */,
+				F1E743791968F3D200F0FC23 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F126272B1968788E00CC6544 /* PayPalMobile */ = {
+		F1E743521968F3D200F0FC23 = {
 			isa = PBXGroup;
 			children = (
-				F126272C1968788E00CC6544 /* libPayPalMobile.a */,
-				F126272D1968788E00CC6544 /* PayPalConfiguration.h */,
-				F126272E1968788E00CC6544 /* PayPalFuturePaymentViewController.h */,
-				F126272F1968788E00CC6544 /* PayPalMobile.h */,
-				F12627301968788E00CC6544 /* PayPalPayment.h */,
-				F12627311968788E00CC6544 /* PayPalPaymentViewController.h */,
-			);
-			path = PayPalMobile;
-			sourceTree = "<group>";
-		};
-		F1E19BEB1968D1BD005D5216 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F1E19BEC1968D217005D5216 /* PayPalConfig.h */,
-				F1E19BED1968D217005D5216 /* PayPalConfig.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		F1F6E67E196303E9001EE5B2 = {
-			isa = PBXGroup;
-			children = (
-				F126272B1968788E00CC6544 /* PayPalMobile */,
-				F1F6E690196303E9001EE5B2 /* AshaNet_iOS */,
-				F1F6E6A9196303E9001EE5B2 /* AshaNet_iOSTests */,
-				F1F6E689196303E9001EE5B2 /* Frameworks */,
-				F1F6E688196303E9001EE5B2 /* Products */,
-				BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */,
+				F1E7438D1968F4FB00F0FC23 /* PayPalMobile */,
+				F1E743641968F3D200F0FC23 /* AshaNet_iOS */,
+				F1E7437D1968F3D200F0FC23 /* AshaNet_iOSTests */,
+				F1E7435D1968F3D200F0FC23 /* Frameworks */,
+				F1E7435C1968F3D200F0FC23 /* Products */,
+				4C294B4DC82349AB94CA8F7D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
-		F1F6E688196303E9001EE5B2 /* Products */ = {
+		F1E7435C1968F3D200F0FC23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */,
-				F1F6E6A2196303E9001EE5B2 /* AshaNet_iOSTests.xctest */,
+				F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */,
+				F1E743761968F3D200F0FC23 /* AshaNet_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F1F6E689196303E9001EE5B2 /* Frameworks */ = {
+		F1E7435D1968F3D200F0FC23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F126273919687CAB00CC6544 /* SystemConfiguration.framework */,
-				F126273719687CA200CC6544 /* MessageUI.framework */,
-				F126273519687C9C00CC6544 /* CoreLocation.framework */,
-				F126273319687C8E00CC6544 /* AVFoundation.framework */,
-				F1F6E68A196303E9001EE5B2 /* Foundation.framework */,
-				F1F6E68C196303E9001EE5B2 /* CoreGraphics.framework */,
-				F1F6E68E196303E9001EE5B2 /* UIKit.framework */,
-				F1F6E6A3196303E9001EE5B2 /* XCTest.framework */,
-				AA966DF4B42F42A3B1791AC3 /* libPods.a */,
+				F1E7435E1968F3D200F0FC23 /* Foundation.framework */,
+				F1E743601968F3D200F0FC23 /* CoreGraphics.framework */,
+				F1E743621968F3D200F0FC23 /* UIKit.framework */,
+				F1E743771968F3D200F0FC23 /* XCTest.framework */,
+				553BF50067E04585B13E0344 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F1F6E690196303E9001EE5B2 /* AshaNet_iOS */ = {
+		F1E743641968F3D200F0FC23 /* AshaNet_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F1E19BEB1968D1BD005D5216 /* Models */,
-				F1F6E699196303E9001EE5B2 /* AppDelegate.h */,
-				F1F6E69A196303E9001EE5B2 /* AppDelegate.m */,
-				9F38216719686CA300C8AF42 /* ProjectsViewController.h */,
-				9F38216C19686CB500C8AF42 /* EventsViewController.h */,
-				9F38217119686CD100C8AF42 /* GeneralDonateViewController.h */,
-				9F38217219686CD100C8AF42 /* GeneralDonateViewController.m */,
-				9F38217319686CD100C8AF42 /* GeneralDonateViewController.xib */,
-				9F38216D19686CB500C8AF42 /* EventsViewController.m */,
-				9F3821761968863B00C8AF42 /* ProjectsTableViewCell.h */,
-				9F3821771968863B00C8AF42 /* ProjectsTableViewCell.m */,
-				9F3821801968B19200C8AF42 /* ProjectDetailsViewController.h */,
-				9F3821811968B19200C8AF42 /* ProjectDetailsViewController.m */,
-				9F3821821968B19200C8AF42 /* ProjectDetailsViewController.xib */,
-				9F38217B1968864700C8AF42 /* EventsTableViewCell.h */,
-				9F38217C1968864700C8AF42 /* EventsTableViewCell.m */,
-				9F38217D1968864700C8AF42 /* EventsTableViewCell.xib */,
-				9F3821781968863B00C8AF42 /* ProjectsTableViewCell.xib */,
-				9F38216E19686CB500C8AF42 /* EventsViewController.xib */,
-				9F38216819686CA300C8AF42 /* ProjectsViewController.m */,
-				9F38216919686CA300C8AF42 /* ProjectsViewController.xib */,
-				F1F6E69C196303E9001EE5B2 /* Images.xcassets */,
-				F1F6E691196303E9001EE5B2 /* Supporting Files */,
+				F1E743C21968FAC000F0FC23 /* TableCells */,
+				F1E743C11968FAB000F0FC23 /* Models */,
+				F1E7439D1968F63F00F0FC23 /* EventsViewController.h */,
+				F1E7439E1968F63F00F0FC23 /* EventsViewController.m */,
+				F1E7439F1968F63F00F0FC23 /* EventsViewController.xib */,
+				F1E743A01968F63F00F0FC23 /* GeneralDonateViewController.h */,
+				F1E743A11968F63F00F0FC23 /* GeneralDonateViewController.m */,
+				F1E743A21968F63F00F0FC23 /* GeneralDonateViewController.xib */,
+				F1E743A61968F63F00F0FC23 /* ProjectDetailsViewController.h */,
+				F1E743A71968F63F00F0FC23 /* ProjectDetailsViewController.m */,
+				F1E743A81968F63F00F0FC23 /* ProjectDetailsViewController.xib */,
+				F1E743AC1968F63F00F0FC23 /* ProjectsViewController.h */,
+				F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */,
+				F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */,
+				F1E7436D1968F3D200F0FC23 /* AppDelegate.h */,
+				F1E7436E1968F3D200F0FC23 /* AppDelegate.m */,
+				F1E743951968F63F00F0FC23 /* en.lproj */,
+				F1E743701968F3D200F0FC23 /* Images.xcassets */,
+				F1E743651968F3D200F0FC23 /* Supporting Files */,
 			);
 			path = AshaNet_iOS;
 			sourceTree = "<group>";
 		};
-		F1F6E691196303E9001EE5B2 /* Supporting Files */ = {
+		F1E743651968F3D200F0FC23 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F1F6E692196303E9001EE5B2 /* AshaNet_iOS-Info.plist */,
-				F1F6E693196303E9001EE5B2 /* InfoPlist.strings */,
-				F1F6E696196303E9001EE5B2 /* main.m */,
-				F1F6E698196303E9001EE5B2 /* AshaNet_iOS-Prefix.pch */,
+				F1E743661968F3D200F0FC23 /* AshaNet_iOS-Info.plist */,
+				F1E743671968F3D200F0FC23 /* InfoPlist.strings */,
+				F1E7436A1968F3D200F0FC23 /* main.m */,
+				F1E7436C1968F3D200F0FC23 /* AshaNet_iOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F1F6E6A9196303E9001EE5B2 /* AshaNet_iOSTests */ = {
+		F1E7437D1968F3D200F0FC23 /* AshaNet_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				F1F6E6AF196303E9001EE5B2 /* AshaNet_iOSTests.m */,
-				F1F6E6AA196303E9001EE5B2 /* Supporting Files */,
+				F1E743831968F3D200F0FC23 /* AshaNet_iOSTests.m */,
+				F1E7437E1968F3D200F0FC23 /* Supporting Files */,
 			);
 			path = AshaNet_iOSTests;
 			sourceTree = "<group>";
 		};
-		F1F6E6AA196303E9001EE5B2 /* Supporting Files */ = {
+		F1E7437E1968F3D200F0FC23 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F1F6E6AB196303E9001EE5B2 /* AshaNet_iOSTests-Info.plist */,
-				F1F6E6AC196303E9001EE5B2 /* InfoPlist.strings */,
+				F1E7437F1968F3D200F0FC23 /* AshaNet_iOSTests-Info.plist */,
+				F1E743801968F3D200F0FC23 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1E7438D1968F4FB00F0FC23 /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7438E1968F4FB00F0FC23 /* libPayPalMobile.a */,
+				F1E7438F1968F4FB00F0FC23 /* PayPalConfiguration.h */,
+				F1E743901968F4FB00F0FC23 /* PayPalFuturePaymentViewController.h */,
+				F1E743911968F4FB00F0FC23 /* PayPalMobile.h */,
+				F1E743921968F4FB00F0FC23 /* PayPalPayment.h */,
+				F1E743931968F4FB00F0FC23 /* PayPalPaymentViewController.h */,
+			);
+			path = PayPalMobile;
+			sourceTree = "<group>";
+		};
+		F1E743951968F63F00F0FC23 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				F1E743961968F63F00F0FC23 /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		F1E743C11968FAB000F0FC23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1E743A41968F63F00F0FC23 /* PayPalConfig.h */,
+				F1E743A51968F63F00F0FC23 /* PayPalConfig.m */,
+				F1E743981968F63F00F0FC23 /* Event.h */,
+				F1E743991968F63F00F0FC23 /* Event.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F1E743C21968FAC000F0FC23 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				F1E743A91968F63F00F0FC23 /* ProjectsTableViewCell.h */,
+				F1E743AA1968F63F00F0FC23 /* ProjectsTableViewCell.m */,
+				F1E743AB1968F63F00F0FC23 /* ProjectsTableViewCell.xib */,
+				F1E7439A1968F63F00F0FC23 /* EventsTableViewCell.h */,
+				F1E7439B1968F63F00F0FC23 /* EventsTableViewCell.m */,
+				F1E7439C1968F63F00F0FC23 /* EventsTableViewCell.xib */,
+			);
+			name = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F1F6E686196303E9001EE5B2 /* AshaNet_iOS */ = {
+		F1E7435A1968F3D200F0FC23 /* AshaNet_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1F6E6B3196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOS" */;
+			buildConfigurationList = F1E743871968F3D200F0FC23 /* Build configuration list for PBXNativeTarget "AshaNet_iOS" */;
 			buildPhases = (
-				BF75801B78E64181BEC35014 /* Check Pods Manifest.lock */,
-				F1F6E683196303E9001EE5B2 /* Sources */,
-				F1F6E684196303E9001EE5B2 /* Frameworks */,
-				F1F6E685196303E9001EE5B2 /* Resources */,
-				06455DB77CA944C685283BC7 /* Copy Pods Resources */,
+				DD90C3852AF849BE83C92DCD /* Check Pods Manifest.lock */,
+				F1E743571968F3D200F0FC23 /* Sources */,
+				F1E743581968F3D200F0FC23 /* Frameworks */,
+				F1E743591968F3D200F0FC23 /* Resources */,
+				FCB7B901F4BD4E76AE4C6FB6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,102 +276,88 @@
 			);
 			name = AshaNet_iOS;
 			productName = AshaNet_iOS;
-			productReference = F1F6E687196303E9001EE5B2 /* AshaNet_iOS.app */;
+			productReference = F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F1F6E6A1196303E9001EE5B2 /* AshaNet_iOSTests */ = {
+		F1E743751968F3D200F0FC23 /* AshaNet_iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1F6E6B6196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOSTests" */;
+			buildConfigurationList = F1E7438A1968F3D200F0FC23 /* Build configuration list for PBXNativeTarget "AshaNet_iOSTests" */;
 			buildPhases = (
-				F1F6E69E196303E9001EE5B2 /* Sources */,
-				F1F6E69F196303E9001EE5B2 /* Frameworks */,
-				F1F6E6A0196303E9001EE5B2 /* Resources */,
+				F1E743721968F3D200F0FC23 /* Sources */,
+				F1E743731968F3D200F0FC23 /* Frameworks */,
+				F1E743741968F3D200F0FC23 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F1F6E6A8196303E9001EE5B2 /* PBXTargetDependency */,
+				F1E7437C1968F3D200F0FC23 /* PBXTargetDependency */,
 			);
 			name = AshaNet_iOSTests;
 			productName = AshaNet_iOSTests;
-			productReference = F1F6E6A2196303E9001EE5B2 /* AshaNet_iOSTests.xctest */;
+			productReference = F1E743761968F3D200F0FC23 /* AshaNet_iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F1F6E67F196303E9001EE5B2 /* Project object */ = {
+		F1E743531968F3D200F0FC23 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Patil, Sagar";
 				TargetAttributes = {
-					F1F6E6A1196303E9001EE5B2 = {
-						TestTargetID = F1F6E686196303E9001EE5B2;
+					F1E743751968F3D200F0FC23 = {
+						TestTargetID = F1E7435A1968F3D200F0FC23;
 					};
 				};
 			};
-			buildConfigurationList = F1F6E682196303E9001EE5B2 /* Build configuration list for PBXProject "AshaNet_iOS" */;
+			buildConfigurationList = F1E743561968F3D200F0FC23 /* Build configuration list for PBXProject "AshaNet_iOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F1F6E67E196303E9001EE5B2;
-			productRefGroup = F1F6E688196303E9001EE5B2 /* Products */;
+			mainGroup = F1E743521968F3D200F0FC23;
+			productRefGroup = F1E7435C1968F3D200F0FC23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1F6E686196303E9001EE5B2 /* AshaNet_iOS */,
-				F1F6E6A1196303E9001EE5B2 /* AshaNet_iOSTests */,
+				F1E7435A1968F3D200F0FC23 /* AshaNet_iOS */,
+				F1E743751968F3D200F0FC23 /* AshaNet_iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F1F6E685196303E9001EE5B2 /* Resources */ = {
+		F1E743591968F3D200F0FC23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F6E695196303E9001EE5B2 /* InfoPlist.strings in Resources */,
-				9F38217019686CB500C8AF42 /* EventsViewController.xib in Resources */,
-				9F3821841968B19200C8AF42 /* ProjectDetailsViewController.xib in Resources */,
-				9F38217F1968864700C8AF42 /* EventsTableViewCell.xib in Resources */,
-				9F38216B19686CA300C8AF42 /* ProjectsViewController.xib in Resources */,
-				F1F6E69D196303E9001EE5B2 /* Images.xcassets in Resources */,
-				9F38217519686CD100C8AF42 /* GeneralDonateViewController.xib in Resources */,
-				9F38217A1968863B00C8AF42 /* ProjectsTableViewCell.xib in Resources */,
+				F1E743B61968F63F00F0FC23 /* GeneralDonateViewController.xib in Resources */,
+				F1E743B21968F63F00F0FC23 /* EventsTableViewCell.xib in Resources */,
+				F1E743BE1968F63F00F0FC23 /* ProjectsViewController.xib in Resources */,
+				F1E743BA1968F63F00F0FC23 /* ProjectDetailsViewController.xib in Resources */,
+				F1E743B41968F63F00F0FC23 /* EventsViewController.xib in Resources */,
+				F1E743BC1968F63F00F0FC23 /* ProjectsTableViewCell.xib in Resources */,
+				F1E743691968F3D200F0FC23 /* InfoPlist.strings in Resources */,
+				F1E743AF1968F63F00F0FC23 /* InfoPlist.strings in Resources */,
+				F1E743711968F3D200F0FC23 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1F6E6A0196303E9001EE5B2 /* Resources */ = {
+		F1E743741968F3D200F0FC23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F6E6AE196303E9001EE5B2 /* InfoPlist.strings in Resources */,
+				F1E743821968F3D200F0FC23 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06455DB77CA944C685283BC7 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BF75801B78E64181BEC35014 /* Check Pods Manifest.lock */ = {
+		DD90C3852AF849BE83C92DCD /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,56 +372,80 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FCB7B901F4BD4E76AE4C6FB6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F1F6E683196303E9001EE5B2 /* Sources */ = {
+		F1E743571968F3D200F0FC23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F38217419686CD100C8AF42 /* GeneralDonateViewController.m in Sources */,
-				F1E19BEE1968D217005D5216 /* PayPalConfig.m in Sources */,
-				9F38217E1968864700C8AF42 /* EventsTableViewCell.m in Sources */,
-				9F3821791968863B00C8AF42 /* ProjectsTableViewCell.m in Sources */,
-				F1F6E69B196303E9001EE5B2 /* AppDelegate.m in Sources */,
-				9F38216F19686CB500C8AF42 /* EventsViewController.m in Sources */,
-				9F3821831968B19200C8AF42 /* ProjectDetailsViewController.m in Sources */,
-				9F38216A19686CA300C8AF42 /* ProjectsViewController.m in Sources */,
-				F1F6E697196303E9001EE5B2 /* main.m in Sources */,
+				F1E743BD1968F63F00F0FC23 /* ProjectsViewController.m in Sources */,
+				F1E743B51968F63F00F0FC23 /* GeneralDonateViewController.m in Sources */,
+				F1E743B11968F63F00F0FC23 /* EventsTableViewCell.m in Sources */,
+				F1E743B81968F63F00F0FC23 /* PayPalConfig.m in Sources */,
+				F1E743B31968F63F00F0FC23 /* EventsViewController.m in Sources */,
+				F1E743B01968F63F00F0FC23 /* Event.m in Sources */,
+				F1E743B91968F63F00F0FC23 /* ProjectDetailsViewController.m in Sources */,
+				F1E7436F1968F3D200F0FC23 /* AppDelegate.m in Sources */,
+				F1E743BB1968F63F00F0FC23 /* ProjectsTableViewCell.m in Sources */,
+				F1E7436B1968F3D200F0FC23 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1F6E69E196303E9001EE5B2 /* Sources */ = {
+		F1E743721968F3D200F0FC23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F6E6B0196303E9001EE5B2 /* AshaNet_iOSTests.m in Sources */,
+				F1E743841968F3D200F0FC23 /* AshaNet_iOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F1F6E6A8196303E9001EE5B2 /* PBXTargetDependency */ = {
+		F1E7437C1968F3D200F0FC23 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F1F6E686196303E9001EE5B2 /* AshaNet_iOS */;
-			targetProxy = F1F6E6A7196303E9001EE5B2 /* PBXContainerItemProxy */;
+			target = F1E7435A1968F3D200F0FC23 /* AshaNet_iOS */;
+			targetProxy = F1E7437B1968F3D200F0FC23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F1F6E693196303E9001EE5B2 /* InfoPlist.strings */ = {
+		F1E743671968F3D200F0FC23 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F1F6E694196303E9001EE5B2 /* en */,
+				F1E743681968F3D200F0FC23 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F1F6E6AC196303E9001EE5B2 /* InfoPlist.strings */ = {
+		F1E743801968F3D200F0FC23 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F1F6E6AD196303E9001EE5B2 /* en */,
+				F1E743811968F3D200F0FC23 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F1E743961968F63F00F0FC23 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1E743971968F63F00F0FC23 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -435,7 +453,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F1F6E6B1196303E9001EE5B2 /* Debug */ = {
+		F1E743851968F3D200F0FC23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -473,7 +491,7 @@
 			};
 			name = Debug;
 		};
-		F1F6E6B2196303E9001EE5B2 /* Release */ = {
+		F1E743861968F3D200F0FC23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -505,9 +523,9 @@
 			};
 			name = Release;
 		};
-		F1F6E6B4196303E9001EE5B2 /* Debug */ = {
+		F1E743881968F3D200F0FC23 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */;
+			baseConfigurationReference = 4C294B4DC82349AB94CA8F7D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -521,24 +539,41 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-framework",
+					AudioToolbox,
+					"-framework",
+					CFNetwork,
+					"-framework",
 					CoreGraphics,
+					"-framework",
+					CoreLocation,
 					"-framework",
 					MobileCoreServices,
 					"-framework",
+					Parse,
+					"-framework",
+					QuartzCore,
+					"-framework",
 					Security,
 					"-framework",
+					StoreKit,
+					"-framework",
 					SystemConfiguration,
+					"-weak_framework",
+					Accounts,
+					"-weak_framework",
+					Security,
+					"-weak_framework",
+					Social,
 					"-lc++",
-					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		F1F6E6B5196303E9001EE5B2 /* Release */ = {
+		F1E743891968F3D200F0FC23 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB214888FFFE4A15B579B7E6 /* Pods.xcconfig */;
+			baseConfigurationReference = 4C294B4DC82349AB94CA8F7D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -552,22 +587,39 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-framework",
+					AudioToolbox,
+					"-framework",
+					CFNetwork,
+					"-framework",
 					CoreGraphics,
+					"-framework",
+					CoreLocation,
 					"-framework",
 					MobileCoreServices,
 					"-framework",
+					Parse,
+					"-framework",
+					QuartzCore,
+					"-framework",
 					Security,
 					"-framework",
+					StoreKit,
+					"-framework",
 					SystemConfiguration,
+					"-weak_framework",
+					Accounts,
+					"-weak_framework",
+					Security,
+					"-weak_framework",
+					Social,
 					"-lc++",
-					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		F1F6E6B7196303E9001EE5B2 /* Debug */ = {
+		F1E7438B1968F3D200F0FC23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AshaNet_iOS.app/AshaNet_iOS";
@@ -589,7 +641,7 @@
 			};
 			name = Debug;
 		};
-		F1F6E6B8196303E9001EE5B2 /* Release */ = {
+		F1E7438C1968F3D200F0FC23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AshaNet_iOS.app/AshaNet_iOS";
@@ -610,34 +662,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F1F6E682196303E9001EE5B2 /* Build configuration list for PBXProject "AshaNet_iOS" */ = {
+		F1E743561968F3D200F0FC23 /* Build configuration list for PBXProject "AshaNet_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1F6E6B1196303E9001EE5B2 /* Debug */,
-				F1F6E6B2196303E9001EE5B2 /* Release */,
+				F1E743851968F3D200F0FC23 /* Debug */,
+				F1E743861968F3D200F0FC23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1F6E6B3196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOS" */ = {
+		F1E743871968F3D200F0FC23 /* Build configuration list for PBXNativeTarget "AshaNet_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1F6E6B4196303E9001EE5B2 /* Debug */,
-				F1F6E6B5196303E9001EE5B2 /* Release */,
+				F1E743881968F3D200F0FC23 /* Debug */,
+				F1E743891968F3D200F0FC23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1F6E6B6196303E9001EE5B2 /* Build configuration list for PBXNativeTarget "AshaNet_iOSTests" */ = {
+		F1E7438A1968F3D200F0FC23 /* Build configuration list for PBXNativeTarget "AshaNet_iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1F6E6B7196303E9001EE5B2 /* Debug */,
-				F1F6E6B8196303E9001EE5B2 /* Release */,
+				F1E7438B1968F3D200F0FC23 /* Debug */,
+				F1E7438C1968F3D200F0FC23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F1F6E67F196303E9001EE5B2 /* Project object */;
+	rootObject = F1E743531968F3D200F0FC23 /* Project object */;
 }

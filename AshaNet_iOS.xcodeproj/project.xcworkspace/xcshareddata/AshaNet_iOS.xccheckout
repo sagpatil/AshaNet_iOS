@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A29DC00B-0CD5-4914-89E7-553510089596</string>
+	<string>49045D02-2E73-4BB9-B1F3-8383BF28C842</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AshaNet_iOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BF4FD53D-925C-43F2-AB70-FB22D5816BFD</key>
+		<key>D8C540C2-87E0-4E66-BBE5-02F412AF1840</key>
 		<string>https://github.com/sagpatil/TwitMe.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>AshaNet_iOS.xcodeproj/project.xcworkspace</string>
+	<string>Asha_iOS/AshaNet_iOS/AshaNet_iOS.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BF4FD53D-925C-43F2-AB70-FB22D5816BFD</key>
-		<string>../..</string>
+		<key>D8C540C2-87E0-4E66-BBE5-02F412AF1840</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/sagpatil/TwitMe.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BF4FD53D-925C-43F2-AB70-FB22D5816BFD</string>
+	<string>D8C540C2-87E0-4E66-BBE5-02F412AF1840</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BF4FD53D-925C-43F2-AB70-FB22D5816BFD</string>
+			<string>D8C540C2-87E0-4E66-BBE5-02F412AF1840</string>
 			<key>IDESourceControlWCCName</key>
-			<string>AshaNet_iOS</string>
+			<string>CodePath</string>
 		</dict>
 	</array>
 </dict>

@@ -14,7 +14,7 @@
 // - For live charges, use PayPalEnvironmentProduction (default).
 // - To use the PayPal sandbox, use PayPalEnvironmentSandbox.
 // - For testing, use PayPalEnvironmentNoNetwork.
-#define kPayPalEnvironment PayPalEnvironmentNoNetwork
+#define kPayPalEnvironment PayPalEnvironmentSandbox
 
 @interface PayPalConfig : NSObject
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
