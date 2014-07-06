@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1F6E686196303E9001EE5B2"
+               BlueprintIdentifier = "F1E7435A1968F3D200F0FC23"
                BuildableName = "AshaNet_iOS.app"
                BlueprintName = "AshaNet_iOS"
                ReferencedContainer = "container:AshaNet_iOS.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1F6E6A1196303E9001EE5B2"
+               BlueprintIdentifier = "F1E743751968F3D200F0FC23"
                BuildableName = "AshaNet_iOSTests.xctest"
                BlueprintName = "AshaNet_iOSTests"
                ReferencedContainer = "container:AshaNet_iOS.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F1F6E686196303E9001EE5B2"
+            BlueprintIdentifier = "F1E7435A1968F3D200F0FC23"
             BuildableName = "AshaNet_iOS.app"
             BlueprintName = "AshaNet_iOS"
             ReferencedContainer = "container:AshaNet_iOS.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F1F6E686196303E9001EE5B2"
+            BlueprintIdentifier = "F1E7435A1968F3D200F0FC23"
             BuildableName = "AshaNet_iOS.app"
             BlueprintName = "AshaNet_iOS"
             ReferencedContainer = "container:AshaNet_iOS.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F1F6E686196303E9001EE5B2"
+            BlueprintIdentifier = "F1E7435A1968F3D200F0FC23"
             BuildableName = "AshaNet_iOS.app"
             BlueprintName = "AshaNet_iOS"
             ReferencedContainer = "container:AshaNet_iOS.xcodeproj">

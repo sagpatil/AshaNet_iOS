@@ -10,12 +10,18 @@
 #import "ProjectsViewController.h"
 #import "EventsViewController.h"
 #import "GeneralDonateViewController.h"
+#import <Parse/Parse.h>
+
+static NSString *KApp_id = @"0Kz1Jdnz3PZHlWjY1IBdzuv4tJZcpc8hrnT2mnbR";
+static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [Parse setApplicationId:KApp_id clientKey:KClient_Key];
     
     ProjectsViewController *pvc = [[ProjectsViewController alloc] init];
     EventsViewController *evc = [[EventsViewController alloc] init];
