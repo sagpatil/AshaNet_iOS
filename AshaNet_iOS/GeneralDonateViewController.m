@@ -204,7 +204,7 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [[event allTouches] anyObject];
-    NSLog(@"TOUch ");
+ // DIssmiss keyboard if touched anywhere else on the screen
     if ([self.donationAmountTextField isFirstResponder] && [touch view] != self.donationAmountTextField) {
         [self.donationAmountTextField resignFirstResponder];
     }
