@@ -1,30 +1,27 @@
+# OS X Finder
 .DS_Store
 
-# Xcode
-#
-build/
-*.pbxuser
-!default.pbxuser
+# Xcode per-user config
+*.mode1
 *.mode1v3
-!default.mode1v3
 *.mode2v3
-!default.mode2v3
+*.perspective
 *.perspectivev3
-!default.perspectivev3
+*.pbxuser
+*.xcworkspace
 xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
+
+# Build products
+build/
+*.o
+*.LinkFileList
 *.hmap
-*.ipa
-*.xcuserstate
-profile
-AshaNet_iOS.xcworkspace/xcshareddata/AshaNet_iOS.xccheckout
-# CocoaPods
-#
-# The pros and cons of ignoring the Pods directory are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
-#
-Pods/
-AshaNet_iOS.xcworkspace/xcuserdata/sagpatil.xcuserdatad/UserInterfaceState.xcuserstate
-AshaNet_iOS.xcworkspace/xcuserdata/sumitsavla.xcuserdatad/UserInterfaceState.xcuserstate
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+
+Pods
