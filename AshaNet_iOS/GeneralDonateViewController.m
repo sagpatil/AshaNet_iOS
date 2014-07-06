@@ -28,7 +28,7 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
 @property (strong, nonatomic) NSMutableArray *chapterArray;
 @property (strong, nonatomic) NSString * chapterToDonateTo;
-
+@property (nonatomic, strong) NSNumber *donationAmount;
 @end
 
 @implementation GeneralDonateViewController
@@ -105,14 +105,12 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
     }
     
     self.chapterPickerView.hidden=YES;
-
-    
-    //#TODO  Find a pay to send the chapter donated to the Paypal as transaction parameter (self.chapterToDonateTo will comtain value to be sent)
+    self.donationAmount = total;
     
     PayPalPayment *payment = [[PayPalPayment alloc] init];
     payment.amount = total;
     payment.currencyCode = @"USD";
-    payment.shortDescription = @"Donation towards Ashanet";
+    payment.shortDescription = [NSString stringWithFormat:@"Donation to %@ chapter of Ashanet",self.chapterToDonateTo];
     payment.intent = PayPalPaymentIntentSale;
     
     if (!payment.processable) {
@@ -172,8 +170,13 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
 #pragma mark Proof of payment validation
 
 - (void)sendCompletedPaymentToServer:(PayPalPayment *)completedPayment {
-    // TODO: Send completedPayment.confirmation to server
     NSLog(@"Here is your proof of payment:\n\n%@\n\nSend this to your Parse.com for confirmation and fulfillment.", completedPayment.confirmation);
+    NSDictionary *response = (NSDictionary*)completedPayment.confirmation;
+    PFObject *donation = [PFObject objectWithClassName:@"Donations"];
+    donation[@"donation_amount"] = self.donationAmount;
+    donation[@"chapter"] = self.chapterToDonateTo;
+    donation[@"paypal_confirmation_id"] = response[@"response"][@"id"];
+    [donation saveInBackground];
 }
 
 
@@ -216,7 +219,5 @@ static NSString *kProductionClientId = @"Add Production key here for ASha";
         NSLog(@"%@", object[@"name"]);
         [self.chapterArray addObject:object[@"name"]];
     }
-    
-
 }
 @end
