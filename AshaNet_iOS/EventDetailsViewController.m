@@ -11,7 +11,11 @@
 @interface EventDetailsViewController ()
 
 @property UIBarButtonItem *rightButton;
+@property (weak, nonatomic) IBOutlet UITextView *descTextView;
+@property (weak, nonatomic) IBOutlet UITextView *eventTimeTxtView;
+@property (weak, nonatomic) IBOutlet UIButton *ticketsBtn;
 
+@property (weak, nonatomic) IBOutlet UITextView *eventAddrTxtView;
 @end
 
 @implementation EventDetailsViewController
@@ -28,18 +32,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"SF Half Marathon";
+    self.navigationItem.title = self.selectedEvent.name;
     self.rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(onRightButton:)];
     self.navigationItem.rightBarButtonItem = self.rightButton;
+    
+    self.ticketsBtn.backgroundColor = [UIColor orangeColor];
+    self.ticketsBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    self.ticketsBtn.layer.borderWidth = 0.5f;
+    self.ticketsBtn.layer.cornerRadius = 10.0f;
+    
+    self.descTextView.text = self.selectedEvent.description;
+    self.eventAddrTxtView.text = self.selectedEvent.address;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"E, MMM dd, yyyy hh:mm"];
+    
+    NSString *stringFromDate = [formatter stringFromDate:self.selectedEvent.eventTime];
+    self.eventTimeTxtView.text = stringFromDate;
 }
 
 - (IBAction)onRightButton:(id)sender
 {
     NSMutableArray *sharingItems = [NSMutableArray new];
     
-    [sharingItems addObject:@"Event information"];
-    [sharingItems addObject:@"RSVP Below:"];
-    [sharingItems addObject:@"https://www.facebook.com/events/1418622448387884"];
+    NSArray *lines = @[@"Event information", [NSString stringWithFormat:@"Address: %@", self.selectedEvent.address], @"RSVP Below:", self.selectedEvent.ticketUrl];
+    NSString *linesString = [lines componentsJoinedByString:@"\n\n"];
+    
+    [sharingItems addObject: linesString];
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];
     [self presentViewController:activityController animated:YES completion:nil];

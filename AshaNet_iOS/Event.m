@@ -18,6 +18,7 @@
     self = [super init];
     if (self) {
         self.name = object[@"Name"];
+        self.description = object[@"Description"];
         self.address = object [@"Address"];
         self.eventTime = object [@"Event_time"];
         self.ticketUrl = object [@"Ticket_site_url"];
