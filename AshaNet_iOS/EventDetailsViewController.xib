@@ -49,6 +49,9 @@ San Francisco, CA </string>
                     <state key="normal" title="Get Tickets">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onRSVPBtn:" destination="-1" eventType="touchUpInside" id="O51-j6-8fw"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

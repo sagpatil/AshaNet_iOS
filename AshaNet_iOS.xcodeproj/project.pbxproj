@@ -10,6 +10,8 @@
 		117F1981A0DE4396BD95455E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 553BF50067E04585B13E0344 /* libPods.a */; };
 		9F3821881969E4B900C8AF42 /* EventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3821861969E4B900C8AF42 /* EventDetailsViewController.m */; };
 		9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */; };
+		9F38218D196A046D00C8AF42 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38218B196A046D00C8AF42 /* webViewController.m */; };
+		9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38218C196A046D00C8AF42 /* webViewController.xib */; };
 		F160BEFD1969DE6300B3F361 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = F160BEFC1969DE6300B3F361 /* Project.m */; };
 		F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
 		F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743601968F3D200F0FC23 /* CoreGraphics.framework */; };
@@ -57,6 +59,9 @@
 		9F3821851969E4B900C8AF42 /* EventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailsViewController.h; sourceTree = "<group>"; };
 		9F3821861969E4B900C8AF42 /* EventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailsViewController.m; sourceTree = "<group>"; };
 		9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
+		9F38218A196A046D00C8AF42 /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
+		9F38218B196A046D00C8AF42 /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
+		9F38218C196A046D00C8AF42 /* webViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = webViewController.xib; sourceTree = "<group>"; };
 		F160BEFB1969DE6300B3F361 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		F160BEFC1969DE6300B3F361 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +177,9 @@
 				F1E743C11968FAB000F0FC23 /* Models */,
 				F1E7439D1968F63F00F0FC23 /* EventsViewController.h */,
 				F1E7439E1968F63F00F0FC23 /* EventsViewController.m */,
+				9F38218A196A046D00C8AF42 /* webViewController.h */,
+				9F38218B196A046D00C8AF42 /* webViewController.m */,
+				9F38218C196A046D00C8AF42 /* webViewController.xib */,
 				F1E7439F1968F63F00F0FC23 /* EventsViewController.xib */,
 				F1E743A01968F63F00F0FC23 /* GeneralDonateViewController.h */,
 				F1E743A11968F63F00F0FC23 /* GeneralDonateViewController.m */,
@@ -355,6 +363,7 @@
 				F1E743BC1968F63F00F0FC23 /* ProjectsTableViewCell.xib in Resources */,
 				F1E743691968F3D200F0FC23 /* InfoPlist.strings in Resources */,
 				F1E743AF1968F63F00F0FC23 /* InfoPlist.strings in Resources */,
+				9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */,
 				9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */,
 				F1E743711968F3D200F0FC23 /* Images.xcassets in Resources */,
 			);
@@ -414,6 +423,7 @@
 				F1E743B81968F63F00F0FC23 /* PayPalConfig.m in Sources */,
 				F160BEFD1969DE6300B3F361 /* Project.m in Sources */,
 				F1E743B31968F63F00F0FC23 /* EventsViewController.m in Sources */,
+				9F38218D196A046D00C8AF42 /* webViewController.m in Sources */,
 				F1E743B01968F63F00F0FC23 /* Event.m in Sources */,
 				F1E743B91968F63F00F0FC23 /* ProjectDetailsViewController.m in Sources */,
 				F1E7436F1968F3D200F0FC23 /* AppDelegate.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "EventDetailsViewController.h"
+#import "webViewController.h"
 
 @interface EventDetailsViewController ()
 
@@ -27,6 +28,11 @@
         // Custom initialization
     }
     return self;
+}
+- (IBAction)onRSVPBtn:(id)sender {
+    webViewController *webVC = [[webViewController alloc]initWithNibName:@"webViewController" bundle:nil];
+    webVC.url = [NSURL URLWithString:self.selectedEvent.ticketUrl];
+    [self presentViewController:webVC animated:YES completion:nil];
 }
 
 - (void)viewDidLoad
