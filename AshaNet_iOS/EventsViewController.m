@@ -8,12 +8,13 @@
 
 #import "EventsViewController.h"
 #import "EventsTableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface EventsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *eventsTable;
 @property (nonatomic, strong) EventsTableViewCell *prototypeCell;
-@property (nonatomic, copy) NSArray *projects;
+@property (nonatomic, strong) NSMutableArray *events;
 
 @end
 
@@ -23,7 +24,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+         self.events = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -40,21 +41,36 @@
     self.prototypeCell = [self.eventsTable dequeueReusableCellWithIdentifier:@"EventCell"];
     
     self.navigationItem.title = @"Events - Fundraisers";
+    
+    [self getEventsFromParse];
+    
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 20;
+    return self.events.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"Row..... %i", indexPath.row);
     EventsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell" forIndexPath:indexPath];
-    //   cell.project = self.projects[indexPath.row];
-    
+    [cell customizeCell:self.events[indexPath.row]];
     return cell;
 }
 
+
+#pragma  mark - Helper methods
+
+- (void) getEventsFromParse{
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    NSArray *objects = [query findObjects];
+
+    for (NSDictionary *object in objects){
+        Event *e = [[Event alloc]initWithDictionary:object];
+        [self.events addObject:e];
+    }
+   
+}
 
 - (void)didReceiveMemoryWarning
 {
