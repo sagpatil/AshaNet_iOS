@@ -37,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Donate to Project";
     self.projectLabel.text = self.projectName;
     [self.donationAmountTextField becomeFirstResponder];
     

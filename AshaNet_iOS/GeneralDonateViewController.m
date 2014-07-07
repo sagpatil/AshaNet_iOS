@@ -44,6 +44,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Donate to Chapter";
+
     PayPalConfig *PPconfig  = [PayPalConfig sharedConfig];
     [PPconfig setupForTakingPayments];
     
