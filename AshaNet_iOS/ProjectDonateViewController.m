@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSNumber *donationAmount;
 @property (weak, nonatomic) IBOutlet UIView *successView;
+- (IBAction)onBackButton:(id)sender;
 
 - (IBAction)onDonateTap:(id)sender;
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
@@ -36,7 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    self.projectLabel.text = self.projectName;
+    [self.donationAmountTextField becomeFirstResponder];
     
 }
 
@@ -130,6 +132,10 @@
     [UIView setAnimationDelay:2.0];
     self.successView.alpha = 0.0f;
     [UIView commitAnimations];
+}
+
+- (IBAction)onBackButton:(id)sender {
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

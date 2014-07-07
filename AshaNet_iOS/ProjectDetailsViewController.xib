@@ -129,6 +129,7 @@ In order to integrate education and rural development, Aseema is going to build 
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiR-8d-uj0">
                     <rect key="frame" x="0.0" y="532" width="315" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.84313732389999996" green="0.9450981021" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Donate">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
