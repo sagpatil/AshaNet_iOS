@@ -14,6 +14,10 @@
 		9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38218C196A046D00C8AF42 /* webViewController.xib */; };
 		F117D15F196A3013009981B8 /* ProjectDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F117D15D196A3013009981B8 /* ProjectDonateViewController.m */; };
 		F117D160196A3013009981B8 /* ProjectDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */; };
+		F117D162196A37AD009981B8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F117D161196A37AD009981B8 /* CoreLocation.framework */; };
+		F117D164196A37B7009981B8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F117D163196A37B7009981B8 /* SystemConfiguration.framework */; };
+		F117D166196A37D4009981B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F117D165196A37D4009981B8 /* AVFoundation.framework */; };
+		F117D168196A37DD009981B8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F117D167196A37DD009981B8 /* MessageUI.framework */; };
 		F160BEFD1969DE6300B3F361 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = F160BEFC1969DE6300B3F361 /* Project.m */; };
 		F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
 		F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743601968F3D200F0FC23 /* CoreGraphics.framework */; };
@@ -67,6 +71,10 @@
 		F117D15C196A3013009981B8 /* ProjectDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDonateViewController.h; sourceTree = "<group>"; };
 		F117D15D196A3013009981B8 /* ProjectDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDonateViewController.m; sourceTree = "<group>"; };
 		F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDonateViewController.xib; sourceTree = "<group>"; };
+		F117D161196A37AD009981B8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F117D163196A37B7009981B8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F117D165196A37D4009981B8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F117D167196A37DD009981B8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F160BEFB1969DE6300B3F361 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		F160BEFC1969DE6300B3F361 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +129,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F117D168196A37DD009981B8 /* MessageUI.framework in Frameworks */,
+				F117D166196A37D4009981B8 /* AVFoundation.framework in Frameworks */,
+				F117D164196A37B7009981B8 /* SystemConfiguration.framework in Frameworks */,
+				F117D162196A37AD009981B8 /* CoreLocation.framework in Frameworks */,
 				F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */,
 				F1E743631968F3D200F0FC23 /* UIKit.framework in Frameworks */,
 				F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */,
@@ -166,6 +178,10 @@
 		F1E7435D1968F3D200F0FC23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F117D167196A37DD009981B8 /* MessageUI.framework */,
+				F117D165196A37D4009981B8 /* AVFoundation.framework */,
+				F117D163196A37B7009981B8 /* SystemConfiguration.framework */,
+				F117D161196A37AD009981B8 /* CoreLocation.framework */,
 				F1E7435E1968F3D200F0FC23 /* Foundation.framework */,
 				F1E743601968F3D200F0FC23 /* CoreGraphics.framework */,
 				F1E743621968F3D200F0FC23 /* UIKit.framework */,
