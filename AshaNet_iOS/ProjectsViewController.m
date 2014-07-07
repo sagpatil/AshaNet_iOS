@@ -9,6 +9,7 @@
 #import "ProjectsViewController.h"
 #import "ProjectsTableViewCell.h"
 #import "ProjectDetailsViewController.h"
+#import "MBProgressHUD.h"
 
 @interface ProjectsViewController ()
 
@@ -32,7 +33,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Projects - What we do";
     
+       [self getProjectsFromParse];
     self.projectsTable.dataSource = self;
     self.projectsTable.delegate = self;
     self.projectsTable.rowHeight = 130;
@@ -41,9 +44,11 @@
     [self.projectsTable registerNib:projectCellNib forCellReuseIdentifier:@"ProjectCell"];
     self.prototypeCell = [self.projectsTable dequeueReusableCellWithIdentifier:@"ProjectCell"];
     
-    self.navigationItem.title = @"Projects - What we do";
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    [self getProjectsFromParse];
+
+    
+    
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -93,12 +98,30 @@
 
 - (void) getProjectsFromParse{
     PFQuery *query = [PFQuery queryWithClassName:@"Project"];
-    NSArray *objects = [query findObjects];
     
-    for (NSDictionary *object in objects){
-        Project *e = [[Project alloc]initWithDictionary:object];
-        [self.projects addObject:e];
-    }
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu records.", (unsigned long)objects.count);
+            for (NSDictionary *object in objects){
+                Project *e = [[Project alloc]initWithDictionary:object];
+                [self.projects addObject:e];
+            }
+            [self.projectsTable reloadData];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Failed to retreive the list of chapters from the Backend"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+        }
+    }];
+    
+    
     
 }
 @end
