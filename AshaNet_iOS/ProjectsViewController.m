@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *projectsTable;
 @property (nonatomic, strong) ProjectsTableViewCell *prototypeCell;
-
 @property (nonatomic, strong) NSMutableArray *projects;
 
 @end
@@ -33,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.projectsTable.dataSource = self;
     self.projectsTable.delegate = self;
     self.projectsTable.rowHeight = 130;

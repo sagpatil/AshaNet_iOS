@@ -31,10 +31,13 @@
 }
 
 - (void) customizeCell:(Project *)project{
+    NSArray *PROJECT_TYPES = @[@"Alternative Education", @"Child Home", @"Community Awareness Programs", @"Community Based Interventions", @"Disabilities", @"Educational Experiments", @"Fellowships", @"Formal Schools", @"Internships", @"Non-Formal Educational Centers", @"One Time / Infrastructure", @"Other", @"Pre-Primary", @"Residential School" , @"Resource Centers", @"Special Needs", @"Support a Child", @"Tuition Centers", @"Vocational Training", @"Working with the Government"];
+    
     self.nameLabel.text = project.name;
     self.chapterLabel.text = project.chapter;
     self.areaLabel.text = project.area;
-    self.typeLabel.text = [NSString stringWithFormat:(@"%@"), project.projectType];
+    NSInteger idx = [project.projectType integerValue];
+    self.typeLabel.text =  PROJECT_TYPES[idx];
 }
 
 
