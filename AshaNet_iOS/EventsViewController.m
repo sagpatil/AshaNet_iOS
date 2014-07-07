@@ -35,7 +35,7 @@
     [super viewDidLoad];
     self.eventsTable.dataSource = self;
     self.eventsTable.delegate = self;
-    self.eventsTable.rowHeight = 140;
+    self.eventsTable.rowHeight = 110;
     // Do any additional setup after loading the view from its nib.
     UINib *EventCellNib = [UINib nibWithNibName:@"EventsTableViewCell" bundle:nil];
     [self.eventsTable registerNib:EventCellNib forCellReuseIdentifier:@"EventCell"];
