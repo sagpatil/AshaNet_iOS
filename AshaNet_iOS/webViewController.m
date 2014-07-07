@@ -33,6 +33,7 @@
     [super viewDidLoad];
     self.webView.delegate=self;
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:self.url];
+    self.webView.scalesPageToFit = YES;
     [self.webView loadRequest:requestObj];
   
 }
