@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *eventTimeTxtView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketsBtn;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *eventAddrTxtView;
 @end
 
@@ -49,6 +50,7 @@
     
     self.descTextView.text = self.selectedEvent.description;
     self.eventAddrTxtView.text = self.selectedEvent.address;
+    self.imageView.image = self.selectedEvent.eventImage;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"E, MMM dd, yyyy hh:mm"];

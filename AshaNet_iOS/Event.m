@@ -22,6 +22,13 @@
         self.address = object [@"Address"];
         self.eventTime = object [@"Event_time"];
         self.ticketUrl = object [@"Ticket_site_url"];
+        PFFile *userImageFile = object[@"Image"];
+        [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+            if (!error) {
+                self.eventImage = [UIImage imageWithData:imageData];
+            }
+        }];
+        
     }
     return self;
 }

@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString *ticketUrl;
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSDate *eventTime;
-@property (nonatomic, strong) PFFile *eventImage;
+@property (nonatomic, strong) UIImage *eventImage;
 @property (nonatomic, strong) NSDictionary *pricingInfo;
 
 
