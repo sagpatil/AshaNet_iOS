@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Project.h"
 
 @interface ProjectDetailsViewController : UIViewController
-
+@property (nonatomic, strong) Project *project;
 @end

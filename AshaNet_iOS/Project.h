@@ -19,10 +19,10 @@
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSDate *year;
 @property (nonatomic, strong) NSString *fundsDonated;
-@property (nonatomic, strong) NSString *projectType;
-@property (nonatomic, strong) NSString *focus;
 @property (nonatomic, strong) NSString *chapter;
-@property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong) NSNumber *projectType;
+@property (nonatomic, strong) NSNumber *focus;
+@property (nonatomic, strong) NSNumber *status;
 @property (nonatomic, strong) PFFile *eventImage;
 
 - (id)initWithDictionary:(NSDictionary *)object;

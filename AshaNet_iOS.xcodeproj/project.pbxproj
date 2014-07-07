@@ -12,6 +12,8 @@
 		9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */; };
 		9F38218D196A046D00C8AF42 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38218B196A046D00C8AF42 /* webViewController.m */; };
 		9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38218C196A046D00C8AF42 /* webViewController.xib */; };
+		F117D15F196A3013009981B8 /* ProjectDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F117D15D196A3013009981B8 /* ProjectDonateViewController.m */; };
+		F117D160196A3013009981B8 /* ProjectDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */; };
 		F160BEFD1969DE6300B3F361 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = F160BEFC1969DE6300B3F361 /* Project.m */; };
 		F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
 		F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743601968F3D200F0FC23 /* CoreGraphics.framework */; };
@@ -62,6 +64,9 @@
 		9F38218A196A046D00C8AF42 /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
 		9F38218B196A046D00C8AF42 /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
 		9F38218C196A046D00C8AF42 /* webViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = webViewController.xib; sourceTree = "<group>"; };
+		F117D15C196A3013009981B8 /* ProjectDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDonateViewController.h; sourceTree = "<group>"; };
+		F117D15D196A3013009981B8 /* ProjectDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDonateViewController.m; sourceTree = "<group>"; };
+		F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDonateViewController.xib; sourceTree = "<group>"; };
 		F160BEFB1969DE6300B3F361 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		F160BEFC1969DE6300B3F361 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +198,9 @@
 				F1E743AC1968F63F00F0FC23 /* ProjectsViewController.h */,
 				F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */,
 				F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */,
+				F117D15C196A3013009981B8 /* ProjectDonateViewController.h */,
+				F117D15D196A3013009981B8 /* ProjectDonateViewController.m */,
+				F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */,
 				F1E7436D1968F3D200F0FC23 /* AppDelegate.h */,
 				F1E7436E1968F3D200F0FC23 /* AppDelegate.m */,
 				F1E743951968F63F00F0FC23 /* en.lproj */,
@@ -364,6 +372,7 @@
 				F1E743691968F3D200F0FC23 /* InfoPlist.strings in Resources */,
 				F1E743AF1968F63F00F0FC23 /* InfoPlist.strings in Resources */,
 				9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */,
+				F117D160196A3013009981B8 /* ProjectDonateViewController.xib in Resources */,
 				9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */,
 				F1E743711968F3D200F0FC23 /* Images.xcassets in Resources */,
 			);
@@ -418,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1E743BD1968F63F00F0FC23 /* ProjectsViewController.m in Sources */,
+				F117D15F196A3013009981B8 /* ProjectDonateViewController.m in Sources */,
 				F1E743B51968F63F00F0FC23 /* GeneralDonateViewController.m in Sources */,
 				F1E743B11968F63F00F0FC23 /* EventsTableViewCell.m in Sources */,
 				F1E743B81968F63F00F0FC23 /* PayPalConfig.m in Sources */,

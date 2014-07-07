@@ -7,7 +7,7 @@
 //
 
 #import "webViewController.h"
-#import "MBProgressHUD.h"
+
 
 @interface webViewController ()
 @property (nonatomic,assign)int webViewLoads_;
@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 - (IBAction)onBackButton:(id)sender;
 
-- (IBAction)onComposeButton:(id)sender;
 @end
 
 @implementation webViewController
@@ -35,7 +34,7 @@
     self.webView.delegate=self;
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:self.url];
     [self.webView loadRequest:requestObj];
-     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  
 }
 
 
@@ -46,7 +45,7 @@
   
     
     if ([[webView stringByEvaluatingJavaScriptFromString:@"document.readyState"] isEqualToString:@"complete"]) {
-  [MBProgressHUD hideHUDForView:self.view animated:YES];
+  
     }
 
     
