@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Project.h"
 @interface ProjectsTableViewCell : UITableViewCell
+@property (nonatomic, strong) Project *project;
+
+- (void) customizeCell:(Project *)project;
 
 @end

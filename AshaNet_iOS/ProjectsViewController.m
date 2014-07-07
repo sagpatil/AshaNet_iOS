@@ -14,7 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *projectsTable;
 @property (nonatomic, strong) ProjectsTableViewCell *prototypeCell;
-@property (nonatomic, copy) NSArray *projects;
+
+@property (nonatomic, strong) NSMutableArray *projects;
 
 @end
 
@@ -24,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.projects = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -42,17 +43,18 @@
     
     self.navigationItem.title = @"Projects - What we do";
 
+    [self getProjectsFromParse];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 20;
+    return self.projects.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"Row..... %i", indexPath.row);
     ProjectsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProjectCell" forIndexPath:indexPath];
- //   cell.project = self.projects[indexPath.row];
+    [cell customizeCell:self.projects[indexPath.row]];
     
     return cell;
 }
@@ -75,7 +77,7 @@
     
     [self.projectsTable deselectRowAtIndexPath:indexPath animated:NO];
     ProjectDetailsViewController *pdvc = [[ProjectDetailsViewController alloc]init];
-   // pdvc.selectedMovie = movieModel;
+    pdvc.project = self.projects[indexPath.row];
     pdvc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:pdvc animated:YES];
     
@@ -87,4 +89,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma  mark - Helper methods
+
+- (void) getProjectsFromParse{
+    PFQuery *query = [PFQuery queryWithClassName:@"Project"];
+    NSArray *objects = [query findObjects];
+    
+    for (NSDictionary *object in objects){
+        Project *e = [[Project alloc]initWithDictionary:object];
+        [self.projects addObject:e];
+    }
+    
+}
 @end

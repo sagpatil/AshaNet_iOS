@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Project.h"
+#import <Parse/Parse.h>
 
 @interface ProjectsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

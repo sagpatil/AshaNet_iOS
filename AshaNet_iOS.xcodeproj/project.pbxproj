@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		117F1981A0DE4396BD95455E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 553BF50067E04585B13E0344 /* libPods.a */; };
 		F160BEFD1969DE6300B3F361 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = F160BEFC1969DE6300B3F361 /* Project.m */; };
+		F1C87828196A2302004559AE /* ProjectDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C87826196A2302004559AE /* ProjectDonateViewController.m */; };
+		F1C87829196A2302004559AE /* ProjectDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C87827196A2302004559AE /* ProjectDonateViewController.xib */; };
 		F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
 		F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743601968F3D200F0FC23 /* CoreGraphics.framework */; };
 		F1E743631968F3D200F0FC23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743621968F3D200F0FC23 /* UIKit.framework */; };
@@ -54,6 +56,9 @@
 		553BF50067E04585B13E0344 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F160BEFB1969DE6300B3F361 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		F160BEFC1969DE6300B3F361 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		F1C87825196A2302004559AE /* ProjectDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDonateViewController.h; sourceTree = "<group>"; };
+		F1C87826196A2302004559AE /* ProjectDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDonateViewController.m; sourceTree = "<group>"; };
+		F1C87827196A2302004559AE /* ProjectDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDonateViewController.xib; sourceTree = "<group>"; };
 		F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7435E1968F3D200F0FC23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1E743601968F3D200F0FC23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +179,9 @@
 				F1E743A61968F63F00F0FC23 /* ProjectDetailsViewController.h */,
 				F1E743A71968F63F00F0FC23 /* ProjectDetailsViewController.m */,
 				F1E743A81968F63F00F0FC23 /* ProjectDetailsViewController.xib */,
+				F1C87825196A2302004559AE /* ProjectDonateViewController.h */,
+				F1C87826196A2302004559AE /* ProjectDonateViewController.m */,
+				F1C87827196A2302004559AE /* ProjectDonateViewController.xib */,
 				F1E743AC1968F63F00F0FC23 /* ProjectsViewController.h */,
 				F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */,
 				F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */,
@@ -344,6 +352,7 @@
 				F1E743BE1968F63F00F0FC23 /* ProjectsViewController.xib in Resources */,
 				F1E743BA1968F63F00F0FC23 /* ProjectDetailsViewController.xib in Resources */,
 				F1E743B41968F63F00F0FC23 /* EventsViewController.xib in Resources */,
+				F1C87829196A2302004559AE /* ProjectDonateViewController.xib in Resources */,
 				F1E743BC1968F63F00F0FC23 /* ProjectsTableViewCell.xib in Resources */,
 				F1E743691968F3D200F0FC23 /* InfoPlist.strings in Resources */,
 				F1E743AF1968F63F00F0FC23 /* InfoPlist.strings in Resources */,
@@ -408,6 +417,7 @@
 				F1E743B01968F63F00F0FC23 /* Event.m in Sources */,
 				F1E743B91968F63F00F0FC23 /* ProjectDetailsViewController.m in Sources */,
 				F1E7436F1968F3D200F0FC23 /* AppDelegate.m in Sources */,
+				F1C87828196A2302004559AE /* ProjectDonateViewController.m in Sources */,
 				F1E743BB1968F63F00F0FC23 /* ProjectsTableViewCell.m in Sources */,
 				F1E7436B1968F3D200F0FC23 /* main.m in Sources */,
 			);
