@@ -10,7 +10,7 @@
  #import <QuartzCore/QuartzCore.h>
 #import "PayPalConfig.h"
 #import <Parse/Parse.h>
-
+#import "MBProgressHUD.h"
 
 
 @interface GeneralDonateViewController ()
@@ -54,7 +54,13 @@
     
     self.successView.hidden = YES;
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [self loadChapters];
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    
+    
     ///#TODO update the array form list of chapters coming from PArse
 //    self.chapterArray  = [[NSArray alloc] initWithObjects:@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
     self.chapterPickerView.delegate = self;
