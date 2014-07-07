@@ -44,25 +44,21 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Donate to Chapter";
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self loadChapters];
+    
     PayPalConfig *PPconfig  = [PayPalConfig sharedConfig];
     [PPconfig setupForTakingPayments];
+    
     
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
     [self.selectedChapterLabel addGestureRecognizer:tapGesture];
     
-    
     self.successView.hidden = YES;
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-    [self loadChapters];
-    
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    
-    
-    ///#TODO update the array form list of chapters coming from PArse
-//    self.chapterArray  = [[NSArray alloc] initWithObjects:@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
     self.chapterPickerView.delegate = self;
     self.chapterPickerView.dataSource = self;
     self.chapterPickerView.showsSelectionIndicator = YES;
@@ -74,6 +70,7 @@
     [layer setCornerRadius:5.0]; //when radius is 0, the border is a rectangle
     [layer setBorderWidth:0.5];
     [layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -135,7 +132,6 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
-     NSLog(@"Selected Row %d",row);
     self.chapterToDonateTo = self.chapterArray[row];
     self.selectedChapterLabel.text = self.chapterToDonateTo;
 }
@@ -217,11 +213,32 @@
 
 - (void)loadChapters{
     PFQuery *query = [PFQuery queryWithClassName:@"Chapter"];
-    // Blocking call will block the thread till this network call is executed
-    NSArray *objects = [query findObjects];
-    for (PFObject *object in objects) {
-        NSLog(@"%@", object[@"name"]);
-        [self.chapterArray addObject:object[@"name"]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu records.", (unsigned long)objects.count);
+            for (PFObject *object in objects) {
+               // NSLog(@"%@", object[@"name"]);
+                [self.chapterArray addObject:object[@"name"]];
+            }
+
+            [self.chapterPickerView reloadAllComponents];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Failed to retreive the list of chapters from the Backend"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+        }
+    }];
+
+    
+  
     }
-}
 @end

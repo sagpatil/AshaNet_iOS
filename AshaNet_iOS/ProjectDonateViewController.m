@@ -37,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   // self.navigationItem.title = @"Donate to Project";
     self.projectLabel.text = self.projectName;
     [self.donationAmountTextField becomeFirstResponder];
     
@@ -129,7 +130,7 @@
     self.successView.alpha = 1.0f;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
-    [UIView setAnimationDelay:2.0];
+    [UIView setAnimationDelay:4.0];
     self.successView.alpha = 0.0f;
     [UIView commitAnimations];
 }

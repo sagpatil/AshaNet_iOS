@@ -10,6 +10,7 @@
 #import "EventsTableViewCell.h"
 #import "EventDetailsViewController.h"
 #import <Parse/Parse.h>
+#import "MBProgressHUD.h"
 
 @interface EventsViewController ()
 
@@ -33,17 +34,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Events - Fundraisers";
+    
+    [self getEventsFromParse];
+
     self.eventsTable.dataSource = self;
     self.eventsTable.delegate = self;
-    self.eventsTable.rowHeight = 140;
+    self.eventsTable.rowHeight = 110;
     // Do any additional setup after loading the view from its nib.
     UINib *EventCellNib = [UINib nibWithNibName:@"EventsTableViewCell" bundle:nil];
     [self.eventsTable registerNib:EventCellNib forCellReuseIdentifier:@"EventCell"];
     self.prototypeCell = [self.eventsTable dequeueReusableCellWithIdentifier:@"EventCell"];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    self.navigationItem.title = @"Events - Fundraisers";
-    
-    [self getEventsFromParse];
+
     
 }
 
@@ -72,13 +76,32 @@
 
 - (void) getEventsFromParse{
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    NSArray *objects = [query findObjects];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu records.", (unsigned long)objects.count);
+            for (NSDictionary *object in objects){
+                Event *e = [[Event alloc]initWithDictionary:object];
+                [self.events addObject:e];
+            }
 
-    for (NSDictionary *object in objects){
-        Event *e = [[Event alloc]initWithDictionary:object];
-        [self.events addObject:e];
-    }
-   
+            [self.eventsTable reloadData];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Failed to retreive the list of chapters from the Backend"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+        }
+    }];
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
