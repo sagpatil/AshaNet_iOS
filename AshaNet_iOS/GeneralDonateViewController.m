@@ -213,7 +213,7 @@
 
 - (void)loadChapters{
     PFQuery *query = [PFQuery queryWithClassName:@"Chapter"];
-    
+            query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.

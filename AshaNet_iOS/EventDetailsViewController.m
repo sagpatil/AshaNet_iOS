@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *eventTimeTxtView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketsBtn;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *eventAddrTxtView;
 @end
@@ -39,6 +40,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.scrollView.contentSize =CGSizeMake(320, 700);
+    self.descTextView.alpha = 0.6;
     self.navigationItem.title = self.selectedEvent.name;
     self.rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(onRightButton:)];
     self.navigationItem.rightBarButtonItem = self.rightButton;
@@ -57,6 +60,16 @@
     
     NSString *stringFromDate = [formatter stringFromDate:self.selectedEvent.eventTime];
     self.eventTimeTxtView.text = stringFromDate;
+    
+    
+    CGSize textViewSize = [self.selectedEvent.description
+                           sizeWithFont:[UIFont fontWithName:@"Marker Felt" size:20]
+                           constrainedToSize:CGSizeMake(320, FLT_MAX)
+                               lineBreakMode:NSLineBreakByWordWrapping];
+    CGRect frame = self.descTextView.frame;
+    frame.size.height = textViewSize.height;
+    self.descTextView.frame = frame;
+
 }
 
 - (IBAction)onRightButton:(id)sender

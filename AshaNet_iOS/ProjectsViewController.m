@@ -98,7 +98,7 @@
 
 - (void) getProjectsFromParse{
     PFQuery *query = [PFQuery queryWithClassName:@"Project"];
-    
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.

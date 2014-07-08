@@ -154,6 +154,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F10F4695196B73C200A3A02A /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7439D1968F63F00F0FC23 /* EventsViewController.h */,
+				F1E7439E1968F63F00F0FC23 /* EventsViewController.m */,
+				F1E7439F1968F63F00F0FC23 /* EventsViewController.xib */,
+				F1E743A01968F63F00F0FC23 /* GeneralDonateViewController.h */,
+				F1E743A11968F63F00F0FC23 /* GeneralDonateViewController.m */,
+				F1E743A21968F63F00F0FC23 /* GeneralDonateViewController.xib */,
+				F1E743AC1968F63F00F0FC23 /* ProjectsViewController.h */,
+				F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */,
+				F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
 		F1E743521968F3D200F0FC23 = {
 			isa = PBXGroup;
 			children = (
@@ -194,26 +210,18 @@
 		F1E743641968F3D200F0FC23 /* AshaNet_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F10F4695196B73C200A3A02A /* HomePage */,
 				F1E743C21968FAC000F0FC23 /* TableCells */,
 				F1E743C11968FAB000F0FC23 /* Models */,
-				F1E7439D1968F63F00F0FC23 /* EventsViewController.h */,
-				F1E7439E1968F63F00F0FC23 /* EventsViewController.m */,
 				9F38218A196A046D00C8AF42 /* webViewController.h */,
 				9F38218B196A046D00C8AF42 /* webViewController.m */,
 				9F38218C196A046D00C8AF42 /* webViewController.xib */,
-				F1E7439F1968F63F00F0FC23 /* EventsViewController.xib */,
-				F1E743A01968F63F00F0FC23 /* GeneralDonateViewController.h */,
-				F1E743A11968F63F00F0FC23 /* GeneralDonateViewController.m */,
-				F1E743A21968F63F00F0FC23 /* GeneralDonateViewController.xib */,
 				9F3821851969E4B900C8AF42 /* EventDetailsViewController.h */,
 				9F3821861969E4B900C8AF42 /* EventDetailsViewController.m */,
 				9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */,
 				F1E743A61968F63F00F0FC23 /* ProjectDetailsViewController.h */,
 				F1E743A71968F63F00F0FC23 /* ProjectDetailsViewController.m */,
 				F1E743A81968F63F00F0FC23 /* ProjectDetailsViewController.xib */,
-				F1E743AC1968F63F00F0FC23 /* ProjectsViewController.h */,
-				F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */,
-				F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */,
 				F117D15C196A3013009981B8 /* ProjectDonateViewController.h */,
 				F117D15D196A3013009981B8 /* ProjectDonateViewController.m */,
 				F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */,

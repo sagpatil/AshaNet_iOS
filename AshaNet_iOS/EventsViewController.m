@@ -76,7 +76,7 @@
 
 - (void) getEventsFromParse{
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
