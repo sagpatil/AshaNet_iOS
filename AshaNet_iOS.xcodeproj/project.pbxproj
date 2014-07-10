@@ -19,6 +19,12 @@
 		F117D166196A37D4009981B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F117D165196A37D4009981B8 /* AVFoundation.framework */; };
 		F117D168196A37DD009981B8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F117D167196A37DD009981B8 /* MessageUI.framework */; };
 		F160BEFD1969DE6300B3F361 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = F160BEFC1969DE6300B3F361 /* Project.m */; };
+		F17B9471196E0EC5009C478F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B946F196E0EC5009C478F /* LoginViewController.m */; };
+		F17B9472196E0EC5009C478F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17B9470196E0EC5009C478F /* LoginViewController.xib */; };
+		F17B9479196EE008009C478F /* NewProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B9477196EE008009C478F /* NewProjectViewController.m */; };
+		F17B947A196EE008009C478F /* NewProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17B9478196EE008009C478F /* NewProjectViewController.xib */; };
+		F17B9489196F578C009C478F /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B9487196F578C009C478F /* NewEventViewController.m */; };
+		F17B948A196F578C009C478F /* NewEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17B9488196F578C009C478F /* NewEventViewController.xib */; };
 		F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
 		F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743601968F3D200F0FC23 /* CoreGraphics.framework */; };
 		F1E743631968F3D200F0FC23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743621968F3D200F0FC23 /* UIKit.framework */; };
@@ -77,6 +83,15 @@
 		F117D167196A37DD009981B8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F160BEFB1969DE6300B3F361 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		F160BEFC1969DE6300B3F361 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		F17B946E196E0EC5009C478F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F17B946F196E0EC5009C478F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F17B9470196E0EC5009C478F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F17B9476196EE008009C478F /* NewProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProjectViewController.h; sourceTree = "<group>"; };
+		F17B9477196EE008009C478F /* NewProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewProjectViewController.m; sourceTree = "<group>"; };
+		F17B9478196EE008009C478F /* NewProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewProjectViewController.xib; sourceTree = "<group>"; };
+		F17B9486196F578C009C478F /* NewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventViewController.h; sourceTree = "<group>"; };
+		F17B9487196F578C009C478F /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventViewController.m; sourceTree = "<group>"; };
+		F17B9488196F578C009C478F /* NewEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewEventViewController.xib; sourceTree = "<group>"; };
 		F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7435E1968F3D200F0FC23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1E743601968F3D200F0FC23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -217,6 +232,15 @@
 				F117D15C196A3013009981B8 /* ProjectDonateViewController.h */,
 				F117D15D196A3013009981B8 /* ProjectDonateViewController.m */,
 				F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */,
+				F17B946E196E0EC5009C478F /* LoginViewController.h */,
+				F17B946F196E0EC5009C478F /* LoginViewController.m */,
+				F17B9470196E0EC5009C478F /* LoginViewController.xib */,
+				F17B9476196EE008009C478F /* NewProjectViewController.h */,
+				F17B9477196EE008009C478F /* NewProjectViewController.m */,
+				F17B9478196EE008009C478F /* NewProjectViewController.xib */,
+				F17B9486196F578C009C478F /* NewEventViewController.h */,
+				F17B9487196F578C009C478F /* NewEventViewController.m */,
+				F17B9488196F578C009C478F /* NewEventViewController.xib */,
 				F1E7436D1968F3D200F0FC23 /* AppDelegate.h */,
 				F1E7436E1968F3D200F0FC23 /* AppDelegate.m */,
 				F1E743951968F63F00F0FC23 /* en.lproj */,
@@ -384,10 +408,13 @@
 				F1E743BE1968F63F00F0FC23 /* ProjectsViewController.xib in Resources */,
 				F1E743BA1968F63F00F0FC23 /* ProjectDetailsViewController.xib in Resources */,
 				F1E743B41968F63F00F0FC23 /* EventsViewController.xib in Resources */,
+				F17B947A196EE008009C478F /* NewProjectViewController.xib in Resources */,
+				F17B948A196F578C009C478F /* NewEventViewController.xib in Resources */,
 				F1E743BC1968F63F00F0FC23 /* ProjectsTableViewCell.xib in Resources */,
 				F1E743691968F3D200F0FC23 /* InfoPlist.strings in Resources */,
 				F1E743AF1968F63F00F0FC23 /* InfoPlist.strings in Resources */,
 				9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */,
+				F17B9472196E0EC5009C478F /* LoginViewController.xib in Resources */,
 				F117D160196A3013009981B8 /* ProjectDonateViewController.xib in Resources */,
 				9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */,
 				F1E743711968F3D200F0FC23 /* Images.xcassets in Resources */,
@@ -447,6 +474,7 @@
 				F1E743B51968F63F00F0FC23 /* GeneralDonateViewController.m in Sources */,
 				F1E743B11968F63F00F0FC23 /* EventsTableViewCell.m in Sources */,
 				F1E743B81968F63F00F0FC23 /* PayPalConfig.m in Sources */,
+				F17B9479196EE008009C478F /* NewProjectViewController.m in Sources */,
 				F160BEFD1969DE6300B3F361 /* Project.m in Sources */,
 				F1E743B31968F63F00F0FC23 /* EventsViewController.m in Sources */,
 				9F38218D196A046D00C8AF42 /* webViewController.m in Sources */,
@@ -456,6 +484,8 @@
 				9F3821881969E4B900C8AF42 /* EventDetailsViewController.m in Sources */,
 				F1E743BB1968F63F00F0FC23 /* ProjectsTableViewCell.m in Sources */,
 				F1E7436B1968F3D200F0FC23 /* main.m in Sources */,
+				F17B9471196E0EC5009C478F /* LoginViewController.m in Sources */,
+				F17B9489196F578C009C478F /* NewEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

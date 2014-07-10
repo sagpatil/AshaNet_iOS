@@ -8,7 +8,7 @@
 
 #import "ProjectDetailsViewController.h"
 #import "ProjectDonateViewController.h"
-
+#import "LoginViewController.h"
 @interface ProjectDetailsViewController ()
 
 @property UIBarButtonItem *rightButton;
@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *yearTextView;
 
 - (IBAction)onDonateTap:(id)sender;
+- (IBAction)onLoginTap:(id)sender;
 
 @end
 
@@ -80,5 +81,10 @@
     [self presentViewController:prjVC animated:YES completion:nil];
     
     
+}
+
+- (IBAction)onLoginTap:(id)sender {
+    LoginViewController *lVC = [[LoginViewController alloc]init];
+    [self presentViewController:lVC animated:YES completion:nil];
 }
 @end
