@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "NewProjectViewController.h"
+#import "NewEventViewController.h"
 #import <Parse/Parse.h>
 
 @interface LoginViewController ()
@@ -14,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 - (IBAction)onLoginTap:(id)sender;
 - (IBAction)onBackTap:(id)sender;
+- (IBAction)onProjectTap:(id)sender;
+- (IBAction)onEventTap:(id)sender;
+
 
 @end
 
@@ -44,10 +49,14 @@
     [PFUser logInWithUsernameInBackground:self.userNameTextField.text password:self.passwordTextField.text
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
-                                            NSLog(@"Login Success");
+                                           UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Announcement" message: @"Success Login" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                            
+                                            [alert show];
                                             
                                         } else {
-                                            NSLog(@"Login Failure");
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Announcement" message: @"Failed Login" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                            
+                                            [alert show];
                                         }
                                     }];
     
@@ -55,5 +64,16 @@
 
 - (IBAction)onBackTap:(id)sender {
    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)onProjectTap:(id)sender {
+     NewProjectViewController *pVC = [[NewProjectViewController alloc]init];
+ 
+    [self presentViewController:pVC animated:YES completion:nil];
+}
+- (IBAction)onEventTap:(id)sender {
+   
+    NewEventViewController *pVC = [[NewEventViewController alloc]init];
+    [self presentViewController:pVC animated:YES completion:nil];
 }
 @end

@@ -9,6 +9,7 @@
 #import "NewProjectViewController.h"
 
 @interface NewProjectViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -26,7 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.scrollView.contentSize =CGSizeMake(320, 700);
+
 }
 
 - (void)didReceiveMemoryWarning
