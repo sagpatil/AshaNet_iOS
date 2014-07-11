@@ -55,6 +55,10 @@
     [formatter setDateFormat:@"YYYY"];
     self.yearTextView.text = [NSString stringWithFormat:@"%@",  [formatter stringFromDate:self.project.year]];
     
+    UIImage *myGradient = [UIImage imageNamed:@"gradientGreenBlack.png"];
+    self.purposeTextView.backgroundColor = [UIColor colorWithPatternImage:myGradient];
+
+    
 }
 
 - (IBAction)onRightButton:(id)sender

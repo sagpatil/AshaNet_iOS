@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *eventTimeTxtView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketsBtn;
 
+@property (weak, nonatomic) IBOutlet UIView *gradientView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *eventAddrTxtView;
 @end
@@ -57,6 +58,20 @@
     
     NSString *stringFromDate = [formatter stringFromDate:self.selectedEvent.eventTime];
     self.eventTimeTxtView.text = stringFromDate;
+    
+    
+    
+    self.descTextView.textColor=[UIColor blackColor];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.descTextView.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor],(id)[[UIColor colorWithRed:255/255.0 green:239/255.0 blue:215/255.0 alpha:1.0] CGColor],nil];
+    
+    [self.descTextView.layer insertSublayer:gradient atIndex:0];
+    
+    self.descTextView.backgroundColor=[UIColor clearColor];
+    
+    
 }
 
 - (IBAction)onRightButton:(id)sender

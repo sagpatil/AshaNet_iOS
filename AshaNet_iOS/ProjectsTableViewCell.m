@@ -38,7 +38,7 @@
     self.areaLabel.text = project.area;
     NSInteger idx = [project.projectType integerValue];
     self.typeLabel.text =  PROJECT_TYPES[idx];
-}
+   }
 
 
 @end

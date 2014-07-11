@@ -44,7 +44,7 @@ static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
     tabBarController.tabBar.tintColor = [UIColor yellowColor];
     tabBarController.tabBar.barTintColor = [UIColor blackColor];
     
-    [[UINavigationBar appearance] setBarTintColor: [UIColor orangeColor]];
+    [[UINavigationBar appearance] setBarTintColor: [UIColor blueColor]];
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
     shadow.shadowOffset = CGSizeMake(0, 1);
