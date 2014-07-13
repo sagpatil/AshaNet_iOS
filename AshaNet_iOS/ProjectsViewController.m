@@ -10,6 +10,7 @@
 #import "ProjectsTableViewCell.h"
 #import "ProjectDetailsViewController.h"
 #import "MBProgressHUD.h"
+#import "FullViewViewController.h"
 
 @interface ProjectsViewController ()
 
@@ -81,6 +82,7 @@
     
     [self.projectsTable deselectRowAtIndexPath:indexPath animated:NO];
     ProjectDetailsViewController *pdvc = [[ProjectDetailsViewController alloc]init];
+    // FullViewViewController *pdvc = [[FullViewViewController alloc]init];
     pdvc.project = self.projects[indexPath.row];
     pdvc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:pdvc animated:YES];

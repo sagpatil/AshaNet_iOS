@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *descTextView;
 @property (weak, nonatomic) IBOutlet UITextView *eventTimeTxtView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketsBtn;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *gradientView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -50,6 +51,7 @@
     self.ticketsBtn.layer.cornerRadius = 10.0f;
     
     self.descTextView.text = self.selectedEvent.description;
+    self.descriptionLabel.text = self.selectedEvent.description;
     self.eventAddrTxtView.text = self.selectedEvent.address;
     self.imageView.image = self.selectedEvent.eventImage;
     
@@ -59,17 +61,34 @@
     NSString *stringFromDate = [formatter stringFromDate:self.selectedEvent.eventTime];
     self.eventTimeTxtView.text = stringFromDate;
     
+    CGSize textViewSize = [self.selectedEvent.description
+                           sizeWithFont:[UIFont fontWithName:@"Helvetica" size:20]
+                           constrainedToSize:CGSizeMake(320, FLT_MAX)
+                           lineBreakMode:NSLineBreakByWordWrapping];
+    CGRect frame = self.descTextView.frame;
+    frame.size.height = textViewSize.height;
+    self.descTextView.frame = frame;
+    [self.descTextView setFont:[UIFont fontWithName:@"Helvetica" size:18]];
+    self.gradientView.center = CGPointMake(160, 355);
     
-    
-    self.descTextView.textColor=[UIColor blackColor];
+    //self.descTextView.textColor=[UIColor blackColor];
     
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.descTextView.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor],(id)[[UIColor colorWithRed:255/255.0 green:239/255.0 blue:215/255.0 alpha:1.0] CGColor],nil];
+    gradient.colors = [NSArray arrayWithObjects:(id)[UIColor clearColor].CGColor, (id)[UIColor orangeColor].CGColor, nil];
+    gradient.startPoint = CGPointMake(1.0f, 0.0f);
+    gradient.endPoint = CGPointMake(1.0f, 1.0f);
+    [self.gradientView.layer insertSublayer:gradient atIndex:0];
     
-    [self.descTextView.layer insertSublayer:gradient atIndex:0];
+    self.gradientView.backgroundColor = [UIColor clearColor];
+    self.descTextView.backgroundColor = [UIColor clearColor];
     
-    self.descTextView.backgroundColor=[UIColor clearColor];
+//    gradient.frame = self.descTextView.bounds;
+//    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.1] CGColor],(id)[[UIColor orangeColor] CGColor],nil];
+//
+//    //gradient.colors = [NSArray arrayWithObjects:(id)[UIColor clearColor].CGColor, (id)[UIColor orangeColor].CGColor, nil];
+//    [self.descTextView.layer insertSublayer:gradient atIndex:0];
+//    [self.view bringSubviewToFront:self.descTextView];
     
     
 }
@@ -92,5 +111,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    NSLog(@"Change me");
+    if (touch.view == self.gradientView)
+    {
+        [UIView animateKeyframesWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.gradientView.center = CGPointMake(160, 355);
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+}
+
 
 @end

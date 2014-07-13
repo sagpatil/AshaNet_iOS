@@ -9,6 +9,7 @@
 #import "EventsViewController.h"
 #import "EventsTableViewCell.h"
 #import "EventDetailsViewController.h"
+#import "FullViewViewController.h"
 #import <Parse/Parse.h>
 #import "MBProgressHUD.h"
 
@@ -40,7 +41,7 @@
 
     self.eventsTable.dataSource = self;
     self.eventsTable.delegate = self;
-    self.eventsTable.rowHeight = 610;
+    self.eventsTable.rowHeight = 130;
     // Do any additional setup after loading the view from its nib.
     UINib *EventCellNib = [UINib nibWithNibName:@"EventsTableViewCell" bundle:nil];
     [self.eventsTable registerNib:EventCellNib forCellReuseIdentifier:@"EventCell"];
@@ -66,7 +67,8 @@
     Event *evt = self.events[indexPath.row];
     
     [self.eventsTable deselectRowAtIndexPath:indexPath animated:NO];
-    EventDetailsViewController *edvc = [[EventDetailsViewController alloc]init];
+   // EventDetailsViewController *edvc = [[EventDetailsViewController alloc]init];
+    FullViewViewController *edvc = [[FullViewViewController alloc]init];
     edvc.selectedEvent = evt;
     edvc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:edvc animated:YES];

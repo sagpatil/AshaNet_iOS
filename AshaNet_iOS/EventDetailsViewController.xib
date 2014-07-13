@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailsViewController">
             <connections>
                 <outlet property="descTextView" destination="rdU-ac-OkG" id="DGM-Ig-bK8"/>
+                <outlet property="descriptionLabel" destination="wmq-y2-RcR" id="Sjd-jr-vph"/>
                 <outlet property="eventAddrTxtView" destination="IbN-po-COd" id="2Me-Wg-KLg"/>
                 <outlet property="eventTimeTxtView" destination="mAn-mI-Oiz" id="Ufu-Ep-x4p"/>
                 <outlet property="gradientView" destination="6EM-YC-y07" id="zoI-ee-RgB"/>
@@ -20,13 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Description" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-ac-OkG" userLabel="DescriptiontextView">
-                    <rect key="frame" x="5" y="268" width="307" height="168"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="July 06, 2014   9:00 AM" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-mI-Oiz">
                     <rect key="frame" x="20" y="433" width="285" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,16 +50,47 @@ San Francisco, CA </string>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTT-rr-jLb">
-                    <rect key="frame" x="0.0" y="50" width="320" height="219"/>
+                    <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6EM-YC-y07">
-                    <rect key="frame" x="240" y="61" width="65" height="48"/>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6EM-YC-y07">
+                    <rect key="frame" x="0.0" y="415" width="320" height="500"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-y2-RcR">
+                            <rect key="frame" x="0.0" y="10" width="320" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Description" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-ac-OkG" userLabel="DescriptiontextView">
+                            <rect key="frame" x="0.0" y="500" width="320" height="168"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rdU-ac-OkG" secondAttribute="trailing" id="65L-Hb-iwo"/>
+                        <constraint firstItem="wmq-y2-RcR" firstAttribute="top" secondItem="6EM-YC-y07" secondAttribute="top" constant="10" id="El7-no-Xdp"/>
+                        <constraint firstItem="wmq-y2-RcR" firstAttribute="leading" secondItem="6EM-YC-y07" secondAttribute="leading" id="KuK-XA-qTi"/>
+                        <constraint firstItem="rdU-ac-OkG" firstAttribute="top" secondItem="wmq-y2-RcR" secondAttribute="bottom" constant="458" id="aKs-jM-0qd"/>
+                        <constraint firstAttribute="bottom" secondItem="rdU-ac-OkG" secondAttribute="bottom" constant="-168" id="f6f-aL-yRp"/>
+                        <constraint firstAttribute="trailing" secondItem="wmq-y2-RcR" secondAttribute="trailing" id="q8H-7S-oRX"/>
+                        <constraint firstItem="rdU-ac-OkG" firstAttribute="leading" secondItem="6EM-YC-y07" secondAttribute="leading" id="wya-BY-qw5"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6EM-YC-y07" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qbp-8U-xvB"/>
+                <constraint firstItem="6EM-YC-y07" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="415" id="eFb-zQ-Pbm"/>
+                <constraint firstAttribute="trailing" secondItem="6EM-YC-y07" secondAttribute="trailing" id="lRd-tL-jlb"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
