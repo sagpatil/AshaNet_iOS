@@ -7,7 +7,7 @@
 //
 
 #import "Project.h"
-
+#import <Parse/Parse.h>
 
 @implementation Project
 - (id)initWithDictionary:(NSDictionary *)object{
@@ -59,6 +59,27 @@
     }
     
     return areas;
+}
+
++ (NSArray *)CHAPTERS
+{
+    static NSMutableArray *chapters = nil;
+    if (!chapters) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Chapter"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                // The find succeeded.
+                NSLog(@"Successfully retrieved %lu records.", (unsigned long)objects.count);
+                for (PFObject *object in objects) {
+                    // NSLog(@"%@", object[@"name"]);
+                    [chapters addObject:object[@"name"]];
+                }
+            } else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);                   }
+        }];
+    }
+    
+    return chapters;
 }
 
 @end

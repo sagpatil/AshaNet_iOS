@@ -29,5 +29,5 @@
 + (NSArray *) TYPES;
 + (NSArray *) PRIMARY_FOCUSES;
 + (NSArray *) AREAS;
-
++ (NSMutableArray *) CHAPTERS;
 @end
