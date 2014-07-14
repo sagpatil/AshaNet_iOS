@@ -44,9 +44,10 @@
     
     self.rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(onRightButton:)];
     self.navigationItem.rightBarButtonItem = self.rightButton;
-    
-    self.typeTextView.text = [NSString stringWithFormat:(@"%@"), self.project.projectType];
-    self.focusTextView.text = [NSString stringWithFormat:(@"%@"), self.project.focus];
+    NSInteger idx = [self.project.projectType integerValue];
+    self.typeTextView.text = Project.TYPES[idx];
+    idx = [self.project.focus integerValue];
+    self.focusTextView.text = Project.PRIMARY_FOCUSES[idx];
     self.areaTextView.text = self.project.area;
     self.descriptionTextView.text = self.project.description;
     self.chapterTextView.text = self.project.chapter;

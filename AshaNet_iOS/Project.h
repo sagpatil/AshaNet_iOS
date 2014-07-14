@@ -26,4 +26,8 @@
 @property (nonatomic, strong) PFFile *eventImage;
 
 - (id)initWithDictionary:(NSDictionary *)object;
++ (NSArray *) TYPES;
++ (NSArray *) PRIMARY_FOCUSES;
++ (NSArray *) AREAS;
+
 @end
