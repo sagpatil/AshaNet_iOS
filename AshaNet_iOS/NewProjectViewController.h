@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewProjectViewController : UIViewController
+@interface NewProjectViewController : UIViewController < UITextFieldDelegate, UITextViewDelegate, UIPickerViewDataSource,UIPickerViewDelegate>
 
 @end
