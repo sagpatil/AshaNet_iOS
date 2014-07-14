@@ -30,4 +30,35 @@
     }
     return self;
 }
+
++ (NSArray *)TYPES
+{
+    static NSArray *types = nil;
+    if (!types) {
+        types = @[@"Alternative Education", @"Child Home", @"Community Awareness Programs", @"Community Based Interventions", @"Disabilities", @"Educational Experiments", @"Fellowships", @"Formal Schools", @"Internships", @"Non-Formal Educational Centers", @"One Time / Infrastructure", @"Other", @"Pre-Primary", @"Residential School" , @"Resource Centers", @"Special Needs", @"Support a Child", @"Tuition Centers", @"Vocational Training", @"Working with the Government"];
+    }
+    
+    return types;
+}
+
++ (NSArray *)PRIMARY_FOCUSES
+{
+    static NSArray *primaryFocuses = nil;
+    if (!primaryFocuses) {
+        primaryFocuses = @[@"children from slums", @"children of (ex)convicts", @"children of dalits/tribals", @"children of lepers", @"children of migrant workers", @"children of sex workers", @"children who are working", @"children with disabilities", @"children with hemophilia", @"creating resources", @"dropouts", @"girls", @"health and cleanliness", @"orphans" , @"other", @"remedial education", @"to go to formal school", @"vocational training"];
+    }
+    
+    return primaryFocuses;
+}
+
++ (NSArray *)AREAS
+{
+    static NSArray *areas = nil;
+    if (!areas) {
+        areas = @[@"ANDAMAN AND NICOBAR ISLANDS", @"ANDHRA PRADESH", @"ARUNACHAL PRADESH", @"ASSAM", @"BIHAR", @"CHANDIGARH", @"CHHATTISGARH", @"DADRA AND NAGAR HAVELI", @"DAMAN AND DIU", @"DELHI", @"GOA", @"GUJARAT", @"HARYANA", @"HIMACHAL PRADESH" , @"JAMMU AND KASHMIR", @"JHARKHAND", @"KARNATAKA", @"KERALA"];//TODO add more states
+    }
+    
+    return areas;
+}
+
 @end
