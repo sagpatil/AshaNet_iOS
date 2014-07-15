@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface Project : NSObject
-@property (nonatomic, strong) NSNumber *projectId;
+@property (nonatomic, strong) NSString *projectId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *purpose;

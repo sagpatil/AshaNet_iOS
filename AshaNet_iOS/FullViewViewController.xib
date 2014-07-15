@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullViewViewController">
             <connections>
+                <outlet property="editButton" destination="A9W-uF-hmj" id="4VP-qM-lno"/>
                 <outlet property="fullscreenDesciption" destination="4fL-Zp-skP" id="7oV-Z7-Cru"/>
                 <outlet property="imageView" destination="Jjw-T1-y79" id="0Ha-ke-Id6"/>
                 <outlet property="nameLabel" destination="zvL-e4-ug9" id="rhw-5j-UAQ"/>
@@ -79,6 +80,16 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9W-uF-hmj">
+                            <rect key="frame" x="229" y="7" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Edit">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onEditTap:" destination="-1" eventType="touchUpInside" id="lCy-S3-jVb"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <gestureRecognizers/>

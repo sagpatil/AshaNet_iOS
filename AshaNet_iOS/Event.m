@@ -17,6 +17,7 @@
     
     self = [super init];
     if (self) {
+        self.eventId = object[@"eventId"];
         self.name = object[@"Name"];
         self.description = object[@"Description"];
         self.address = object [@"Address"];

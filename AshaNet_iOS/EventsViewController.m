@@ -8,7 +8,7 @@
 
 #import "EventsViewController.h"
 #import "EventsTableViewCell.h"
-#import "EventDetailsViewController.h"
+#import "NewEventViewController.h"
 #import "FullViewViewController.h"
 #import <Parse/Parse.h>
 #import "MBProgressHUD.h"

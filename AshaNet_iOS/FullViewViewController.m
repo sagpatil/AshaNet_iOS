@@ -7,6 +7,7 @@
 //
 
 #import "FullViewViewController.h"
+#import "NewEventViewController.h"
 
 @interface FullViewViewController ()
 
@@ -18,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *onDollarbuttonClicked;
 - (IBAction)onDollarBUttontap:(id)sender;
 - (IBAction)handlePan:(id)sender;
+- (IBAction)onEditTap:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
 
 @end
 
@@ -116,5 +119,11 @@
         
     }
 
+}
+
+- (IBAction)onEditTap:(id)sender {
+    NewEventViewController *evc = [[NewEventViewController alloc]initWithEvent:self.selectedEvent];
+    
+    [self presentViewController:evc animated:YES completion:nil];
 }
 @end

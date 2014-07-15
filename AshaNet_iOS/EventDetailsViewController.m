@@ -8,6 +8,7 @@
 
 #import "EventDetailsViewController.h"
 #import "webViewController.h"
+#import "NewEventViewController.h"
 
 @interface EventDetailsViewController ()
 
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *eventTimeTxtView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketsBtn;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
 
 @property (weak, nonatomic) IBOutlet UIView *gradientView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -82,6 +84,7 @@
     
     self.gradientView.backgroundColor = [UIColor clearColor];
     self.descTextView.backgroundColor = [UIColor clearColor];
+
     
 //    gradient.frame = self.descTextView.bounds;
 //    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.1] CGColor],(id)[[UIColor orangeColor] CGColor],nil];
@@ -125,6 +128,7 @@
         
     }
 }
+
 
 
 @end

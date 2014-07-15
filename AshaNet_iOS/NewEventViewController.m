@@ -8,11 +8,14 @@
 
 #import "NewEventViewController.h"
 #import <Parse/Parse.h>
+#import "Event.h"
 #import <QuartzCore/QuartzCore.h>
 
 static NSString *KPlaceHolderText = @"Enter Description Here.. Add ticket prices in description";
 
 @interface NewEventViewController ()
+@property (strong, nonatomic, readwrite) Event *selectedEvent;
+@property (nonatomic, assign) BOOL editMode;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
@@ -40,9 +43,20 @@ static NSString *KPlaceHolderText = @"Enter Description Here.. Add ticket prices
     return self;
 }
 
+- (id)initWithEvent:(Event *)e
+{
+    self = [super init];
+    if (self) {
+        _selectedEvent = e;
+        _editMode = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.datePicker.hidden = YES;
     self.scrollView.contentSize =CGSizeMake(320, 700);
     self.orignalCentre = self.scrollView.center;
@@ -58,6 +72,22 @@ static NSString *KPlaceHolderText = @"Enter Description Here.. Add ticket prices
     self.descriptionTextView.delegate = self;
     self.descriptionTextView.text = KPlaceHolderText;
     self.descriptionTextView.textColor = [UIColor lightGrayColor];
+    
+    if(self.editMode)
+    {
+        self.nameTextField.text = self.selectedEvent.name;
+        self.descriptionTextView.text = self.selectedEvent.description;
+        self.descriptionTextView.textColor = [UIColor blackColor];
+        self.urlTextField.text = self.selectedEvent.ticketUrl;
+        self.imageView.image = self.selectedEvent.eventImage;
+        self.datePicker.date = self.selectedEvent.eventTime;
+        self.addressTextField.text = self.selectedEvent.address;
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd-MMMM-yyyy hh:mm a"];
+        NSString *strDate = [dateFormatter stringFromDate:self.datePicker.date];
+        self.dateTimeButton.titleLabel.text = [NSString stringWithFormat:@"        %@",strDate];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,20 +109,48 @@ static NSString *KPlaceHolderText = @"Enter Description Here.. Add ticket prices
 #pragma mark Button Methods
 
 - (IBAction)onSavetap:(id)sender {
-    PFObject *event = [PFObject objectWithClassName:@"Event"];
-    event[@"Name"]= self.nameTextField.text;
-    event[@"Description"]= self.descriptionTextView.text;
-    event[@"Ticket_site_url"] = self.urlTextField.text;
-    event[@"Address"] = self.addressTextField.text;
-    event[@"Event_time"] = self.eventDate;
-    
-    NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-    event[@"Image"] = imageFile;
-    [event saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        NSLog(@"Save Complete");
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    }];
+    if (self.editMode) {
+
+        PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+        [query whereKey:@"eventId" equalTo:self.selectedEvent.eventId];
+        
+        NSArray *objects = [query findObjects];
+           Event *object = [[Event alloc]initWithDictionary:objects[0]];
+        
+
+            PFObject *event = [PFObject objectWithClassName:@"Event"];
+            event[@"Name"]= self.nameTextField.text;
+            event[@"Description"]= self.descriptionTextView.text;
+            event[@"Ticket_site_url"] = self.urlTextField.text;
+            event[@"Address"] = self.addressTextField.text;
+            event[@"Event_time"] = self.selectedEvent.eventTime;
+            event[@"eventId"]= object.eventId;
+            NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+            PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+            event[@"Image"] = imageFile;
+
+            [event saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                NSLog(@"Save Complete");
+                [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+            }];
+        
+    }
+    else{
+        PFObject *event = [PFObject objectWithClassName:@"Event"];
+        event[@"Name"]= self.nameTextField.text;
+        event[@"Description"]= self.descriptionTextView.text;
+        event[@"Ticket_site_url"] = self.urlTextField.text;
+        event[@"Address"] = self.addressTextField.text;
+        event[@"Event_time"] = self.datePicker.date;
+        [event incrementKey:@"eventId"];
+        NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+        PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+        event[@"Image"] = imageFile;
+        [event saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            NSLog(@"Save Complete");
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        }];
+    }
 }
 
 - (IBAction)onCanceltap:(id)sender {
@@ -100,7 +158,7 @@ static NSString *KPlaceHolderText = @"Enter Description Here.. Add ticket prices
 }
 
 - (IBAction)onSelectPhotoTap:(id)sender {
-     self.datePicker.hidden = YES;
+    self.datePicker.hidden = YES;
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
@@ -123,7 +181,6 @@ static NSString *KPlaceHolderText = @"Enter Description Here.. Add ticket prices
 #pragma mark UIITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    NSLog(@"Change me");
     self.datePicker.hidden = YES;
     if (textField == self.urlTextField) {
         self.scrollView.center = CGPointMake(160, 200);
@@ -155,7 +212,7 @@ static NSString *KPlaceHolderText = @"Enter Description Here.. Add ticket prices
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-   
+    
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;

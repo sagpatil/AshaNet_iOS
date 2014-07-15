@@ -16,7 +16,7 @@
     if (self) {
         self.name = object[@"Name"];
         self.address = object [@"Address"];
-        self.projectId  = object[@"project_id"];
+        self.projectId  = object[@"objectId"];
         self.description  = object[@"Description"];
         self.purpose  = object[@"Purpose"];
         self.orgDescription  = object[@"Org_Description"];
