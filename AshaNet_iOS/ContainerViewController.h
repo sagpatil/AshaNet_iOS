@@ -16,6 +16,7 @@
  @discussion This class implements support for non-interactive custom view controller transitions.
  @note One of the many current limitations, besides not supporting interactive transitions, is that you cannot change view controllers after the object has been initialized.
  */
+
 @interface ContainerViewController : UIViewController
 
 /// The container view controller delegate receiving the protocol callbacks.
@@ -29,6 +30,7 @@
 
 /// The gesture recognizer responsible for changing view controllers. (read-only)
 @property (nonatomic, readonly) UIGestureRecognizer *interactiveTransitionGestureRecognizer;
+
 
 /** Designated initializer.
  @note The view controllers array cannot be changed after initialization.

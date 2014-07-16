@@ -23,7 +23,8 @@
     toViewController.view.alpha = 0;
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-        fromViewController.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
+        fromViewController.view.transform = CGAffineTransformRotate(fromViewController.view.transform,270.0/180*M_PI);//CGAffineTransformMakeScale(0.1, 0.1);
+        
         toViewController.view.alpha = 1;
     } completion:^(BOOL finished) {
         fromViewController.view.transform = CGAffineTransformIdentity;

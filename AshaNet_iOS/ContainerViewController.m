@@ -22,6 +22,7 @@ static CGFloat const kButtonSlotHeight = 44;
 @property (nonatomic, copy) void (^completionBlock)(BOOL didComplete); /// A block of code we can set to execute after having received the completeTransition: message.
 @property (nonatomic, assign, getter=isAnimated) BOOL animated; /// Private setter for the animated property.
 @property (nonatomic, assign, getter=isInteractive) BOOL interactive; /// Private setter for the interactive property.
+
 @end
 
 /// Instances of this private class perform the default transition animation which is to slide child views horizontally.
@@ -35,6 +36,7 @@ static CGFloat const kButtonSlotHeight = 44;
 @property (nonatomic, strong) UIView *privateButtonsView; /// The view hosting the buttons of the child view controllers.
 @property (nonatomic, strong) UIView *privateContainerView; /// The view hosting the child view controllers views.
 @property (nonatomic, strong) PanGestureInteractiveTransition *defaultInteractionController; /// The default, pan gesture enabled interactive transition controller.
+@property (nonatomic) BOOL topToBottom;
 
 @end
 
@@ -88,12 +90,14 @@ static CGFloat const kButtonSlotHeight = 44;
     // Add gesture recognizer and setup for interactive transition
     __weak typeof(self) wself = self;
     self.defaultInteractionController = [[PanGestureInteractiveTransition alloc] initWithGestureRecognizerInView:self.privateContainerView recognizedBlock:^(UIPanGestureRecognizer *recognizer) {
-        BOOL leftToRight = [recognizer velocityInView:recognizer.view].y > 0;
+        self.topToBottom = [recognizer velocityInView:recognizer.view].y < 0;
         
         NSUInteger currentVCIndex = [self.viewControllers indexOfObject:self.selectedViewController];
-        if (!leftToRight && currentVCIndex != self.viewControllers.count-1) {
+        if (self.topToBottom && currentVCIndex != self.viewControllers.count-1) {
+            NSLog(@"topToBottom %i ", self.topToBottom);
             [wself setSelectedViewController:self.viewControllers[currentVCIndex+1]];
-        } else if (leftToRight && currentVCIndex > 0) {
+        } else if (!self.topToBottom && currentVCIndex > 0) {
+            NSLog(@"topToBottom %i ", self.topToBottom);
             [wself setSelectedViewController:self.viewControllers[currentVCIndex-1]];
         }
     }];
@@ -276,7 +280,7 @@ static CGFloat const kButtonSlotHeight = 44;
                                         };
         
 		// Set the view frame properties which make sense in our specialized ContainerViewController context. Views appear from and disappear to the sides, corresponding to where the icon buttons are positioned. So tapping a button to the right of the currently selected, makes the view disappear to the left and the new view appear from the right. The animator object can choose to use this to determine whether the transition should be going left to right, or right to left, for example.
-		CGFloat travelDistance = (goingRight ? -self.containerView.bounds.size.width : self.containerView.bounds.size.width);
+		CGFloat travelDistance = (goingRight ? self.containerView.bounds.size.height : -self.containerView.bounds.size.height);
 		self.privateDisappearingFromRect = self.privateAppearingToRect = self.containerView.bounds;
 		self.privateDisappearingToRect = CGRectOffset (self.containerView.bounds, travelDistance, 0);
 		self.privateAppearingFromRect = CGRectOffset (self.containerView.bounds, -travelDistance, 0);
@@ -334,9 +338,14 @@ static CGFloat const kInitialSpringVelocity = 0.5;
 	UIViewController* fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
 	
 	// When sliding the views horizontally in and out, figure out whether we are going left or right.
-	BOOL goingRight = ([transitionContext initialFrameForViewController:toViewController].origin.x < [transitionContext finalFrameForViewController:toViewController].origin.x);
-	CGFloat travelDistance = [transitionContext containerView].bounds.size.width + kChildViewPadding;
-	CGAffineTransform travel = CGAffineTransformMakeTranslation (goingRight ? travelDistance : -travelDistance, 0);
+	BOOL goingBottom = ([transitionContext initialFrameForViewController:toViewController].origin.x < [transitionContext finalFrameForViewController:fromViewController].origin.x);
+    NSLog(@"%f",[transitionContext initialFrameForViewController:toViewController].origin.x);
+    NSLog(@"%f",[transitionContext finalFrameForViewController:toViewController].origin.x);
+    NSLog(@"%f",[transitionContext initialFrameForViewController:fromViewController].origin.x);
+    NSLog(@"%f",[transitionContext finalFrameForViewController:fromViewController].origin.x);
+    
+	CGFloat travelDistance = [transitionContext containerView].bounds.size.height + kChildViewPadding;
+	CGAffineTransform travel = CGAffineTransformMakeTranslation (0,goingBottom ? -travelDistance : travelDistance  );
 	
 	[[transitionContext containerView] addSubview:toViewController.view];
 	toViewController.view.alpha = 0;
