@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		117F1981A0DE4396BD95455E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 553BF50067E04585B13E0344 /* libPods.a */; };
+		9F221326197726F700FFA6AF /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F22131C197726F700FFA6AF /* ContainerViewController.m */; };
+		9F221327197726F700FFA6AF /* PanGestureInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F22131D197726F700FFA6AF /* PanGestureInteractiveTransition.m */; };
+		9F221328197726F700FFA6AF /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F22131F197726F700FFA6AF /* Animator.m */; };
+		9F221329197726F700FFA6AF /* AWPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F221321197726F700FFA6AF /* AWPercentDrivenInteractiveTransition.m */; };
+		9F22132A197726F700FFA6AF /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F221323197726F700FFA6AF /* ChildViewController.m */; };
 		9F3821881969E4B900C8AF42 /* EventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3821861969E4B900C8AF42 /* EventDetailsViewController.m */; };
 		9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */; };
 		9F38218D196A046D00C8AF42 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38218B196A046D00C8AF42 /* webViewController.m */; };
@@ -77,6 +82,16 @@
 /* Begin PBXFileReference section */
 		4C294B4DC82349AB94CA8F7D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		553BF50067E04585B13E0344 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F22131C197726F700FFA6AF /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		9F22131D197726F700FFA6AF /* PanGestureInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanGestureInteractiveTransition.m; sourceTree = "<group>"; };
+		9F22131E197726F700FFA6AF /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		9F22131F197726F700FFA6AF /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
+		9F221320197726F700FFA6AF /* AWPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		9F221321197726F700FFA6AF /* AWPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		9F221322197726F700FFA6AF /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		9F221323197726F700FFA6AF /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		9F221324197726F700FFA6AF /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		9F221325197726F700FFA6AF /* PanGestureInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanGestureInteractiveTransition.h; sourceTree = "<group>"; };
 		9F3821851969E4B900C8AF42 /* EventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailsViewController.h; sourceTree = "<group>"; };
 		9F3821861969E4B900C8AF42 /* EventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailsViewController.m; sourceTree = "<group>"; };
 		9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
@@ -249,6 +264,16 @@
 				F1E743A11968F63F00F0FC23 /* GeneralDonateViewController.m */,
 				F1E743A21968F63F00F0FC23 /* GeneralDonateViewController.xib */,
 				9F3821851969E4B900C8AF42 /* EventDetailsViewController.h */,
+				9F22131C197726F700FFA6AF /* ContainerViewController.m */,
+				9F22131D197726F700FFA6AF /* PanGestureInteractiveTransition.m */,
+				9F22131E197726F700FFA6AF /* Animator.h */,
+				9F22131F197726F700FFA6AF /* Animator.m */,
+				9F221320197726F700FFA6AF /* AWPercentDrivenInteractiveTransition.h */,
+				9F221321197726F700FFA6AF /* AWPercentDrivenInteractiveTransition.m */,
+				9F221322197726F700FFA6AF /* ChildViewController.h */,
+				9F221323197726F700FFA6AF /* ChildViewController.m */,
+				9F221324197726F700FFA6AF /* ContainerViewController.h */,
+				9F221325197726F700FFA6AF /* PanGestureInteractiveTransition.h */,
 				9F3821861969E4B900C8AF42 /* EventDetailsViewController.m */,
 				9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */,
 				F1E743A61968F63F00F0FC23 /* ProjectDetailsViewController.h */,
@@ -517,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F221328197726F700FFA6AF /* Animator.m in Sources */,
 				F1E743BD1968F63F00F0FC23 /* ProjectsViewController.m in Sources */,
 				F117D15F196A3013009981B8 /* ProjectDonateViewController.m in Sources */,
 				F1E743B51968F63F00F0FC23 /* GeneralDonateViewController.m in Sources */,
@@ -527,12 +553,16 @@
 				F160BEFD1969DE6300B3F361 /* Project.m in Sources */,
 				F1E743B31968F63F00F0FC23 /* EventsViewController.m in Sources */,
 				9F38218D196A046D00C8AF42 /* webViewController.m in Sources */,
+				9F22132A197726F700FFA6AF /* ChildViewController.m in Sources */,
+				9F221329197726F700FFA6AF /* AWPercentDrivenInteractiveTransition.m in Sources */,
 				F1E743B01968F63F00F0FC23 /* Event.m in Sources */,
 				F1E743B91968F63F00F0FC23 /* ProjectDetailsViewController.m in Sources */,
 				F1E7436F1968F3D200F0FC23 /* AppDelegate.m in Sources */,
 				9F3821881969E4B900C8AF42 /* EventDetailsViewController.m in Sources */,
+				9F221326197726F700FFA6AF /* ContainerViewController.m in Sources */,
 				F1E743BB1968F63F00F0FC23 /* ProjectsTableViewCell.m in Sources */,
 				F1E7436B1968F3D200F0FC23 /* main.m in Sources */,
+				9F221327197726F700FFA6AF /* PanGestureInteractiveTransition.m in Sources */,
 				F17B9471196E0EC5009C478F /* LoginViewController.m in Sources */,
 				F1FC8DCE19765AD600EF2815 /* XOSplashVideoController.m in Sources */,
 				F17B9489196F578C009C478F /* NewEventViewController.m in Sources */,
