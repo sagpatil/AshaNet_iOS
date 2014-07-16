@@ -29,53 +29,49 @@ static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    
-//    
-//    
-//    NSString *portraitVideoName = @"splash";
-//    NSString *portraitImageName = @"Default.png";
-//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && self.window.frame.size.height > 480) {
-//        portraitImageName = @"Default-568h@2x.png";
-//        portraitVideoName = @"splash-568h~iphone";
-//    }
-//    
-//    NSString *landscapeVideoName = nil; // n/a
-//    NSString *landscapeImageName = nil; // n/a
-//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-//        portraitVideoName = @"splash";
-//        portraitImageName = @"Default-Portrait.png";
-//        landscapeVideoName = @"splash-landscape";
-//        landscapeImageName = @"Default-Landscape.png";
-//    }
-//    
-//    // our video
-//    NSURL *portraitUrl = [[NSBundle mainBundle] URLForResource:portraitVideoName withExtension:@"mp4"];
-//    NSURL *landscapeUrl = [[NSBundle mainBundle] URLForResource:landscapeVideoName withExtension:@"mp4"];
-//    
-//    // our splash controller
-//    XOSplashVideoController *splashVideoController =
-//    [[XOSplashVideoController alloc] initWithVideoPortraitUrl:portraitUrl
-//                                            portraitImageName:portraitImageName
-//                                                 landscapeUrl:landscapeUrl
-//                                           landscapeImageName:landscapeImageName
-//                                                     delegate:self];
-//    // we'll start out with the spash view controller in the window
-// //   self.window.rootViewController = splashVideoController;
-//
-//    
-//    [Parse setApplicationId:KApp_id clientKey:KClient_Key];
-//    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-//    
-//    
-//  //  self.window.rootViewController = [[HomeViewController alloc]init];
-//    
-//    self.window.backgroundColor = [UIColor whiteColor];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.privateWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.privateWindow.rootViewController = [self _configuredRootViewController];
     
-    [self.privateWindow makeKeyAndVisible];
+    
+    NSString *portraitVideoName = @"splash";
+    NSString *portraitImageName = @"Default.png";
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && self.window.frame.size.height > 480) {
+        portraitImageName = @"Default-568h@2x.png";
+        portraitVideoName = @"splash-568h~iphone";
+    }
+    
+    NSString *landscapeVideoName = nil; // n/a
+    NSString *landscapeImageName = nil; // n/a
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        portraitVideoName = @"splash";
+        portraitImageName = @"Default-Portrait.png";
+        landscapeVideoName = @"splash-landscape";
+        landscapeImageName = @"Default-Landscape.png";
+    }
+    
+    // our video
+    NSURL *portraitUrl = [[NSBundle mainBundle] URLForResource:portraitVideoName withExtension:@"mp4"];
+    NSURL *landscapeUrl = [[NSBundle mainBundle] URLForResource:landscapeVideoName withExtension:@"mp4"];
+    
+    // our splash controller
+    XOSplashVideoController *splashVideoController =
+    [[XOSplashVideoController alloc] initWithVideoPortraitUrl:portraitUrl
+                                            portraitImageName:portraitImageName
+                                                 landscapeUrl:landscapeUrl
+                                           landscapeImageName:landscapeImageName
+                                                     delegate:self];
+    // we'll start out with the spash view controller in the window
+    self.window.rootViewController = splashVideoController;
+    
+    
+    [Parse setApplicationId:KApp_id clientKey:KClient_Key];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    //  self.window.rootViewController = [[HomeViewController alloc]init];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -90,7 +86,7 @@ static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
 - (void)splashVideoComplete:(XOSplashVideoController *)splashVideo
 {
     // swap out the splash controller for our app's
-  self.window.rootViewController = [[HomeViewController alloc]init];
+    self.window.rootViewController = [self _configuredRootViewController];
 }
 
 
