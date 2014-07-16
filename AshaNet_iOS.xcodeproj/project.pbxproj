@@ -25,6 +25,9 @@
 		F17B947A196EE008009C478F /* NewProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17B9478196EE008009C478F /* NewProjectViewController.xib */; };
 		F17B9489196F578C009C478F /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B9487196F578C009C478F /* NewEventViewController.m */; };
 		F17B948A196F578C009C478F /* NewEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17B9488196F578C009C478F /* NewEventViewController.xib */; };
+		F17D85C41974FDAC00010613 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17D85C21974FDAC00010613 /* HomeViewController.m */; };
+		F17D85C51974FDAC00010613 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17D85C31974FDAC00010613 /* HomeViewController.xib */; };
+		F17D85C719750B6D00010613 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17D85C619750B6D00010613 /* MediaPlayer.framework */; };
 		F1E7435F1968F3D200F0FC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E7435E1968F3D200F0FC23 /* Foundation.framework */; };
 		F1E743611968F3D200F0FC23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743601968F3D200F0FC23 /* CoreGraphics.framework */; };
 		F1E743631968F3D200F0FC23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E743621968F3D200F0FC23 /* UIKit.framework */; };
@@ -53,6 +56,12 @@
 		F1E743BC1968F63F00F0FC23 /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E743AB1968F63F00F0FC23 /* ProjectsTableViewCell.xib */; };
 		F1E743BD1968F63F00F0FC23 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */; };
 		F1E743BE1968F63F00F0FC23 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */; };
+		F1FC8DCE19765AD600EF2815 /* XOSplashVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FC8DCD19765AD600EF2815 /* XOSplashVideoController.m */; };
+		F1FC8DD519765D0F00EF2815 /* splash-568h~iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F1FC8DD019765D0F00EF2815 /* splash-568h~iphone.mp4 */; };
+		F1FC8DD619765D0F00EF2815 /* splash-landscape~ipad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F1FC8DD119765D0F00EF2815 /* splash-landscape~ipad.mp4 */; };
+		F1FC8DD719765D0F00EF2815 /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FC8DD219765D0F00EF2815 /* Splash.png */; };
+		F1FC8DD819765D0F00EF2815 /* splash~ipad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F1FC8DD319765D0F00EF2815 /* splash~ipad.mp4 */; };
+		F1FC8DD919765D0F00EF2815 /* splash~iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F1FC8DD419765D0F00EF2815 /* splash~iphone.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +101,11 @@
 		F17B9486196F578C009C478F /* NewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventViewController.h; sourceTree = "<group>"; };
 		F17B9487196F578C009C478F /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventViewController.m; sourceTree = "<group>"; };
 		F17B9488196F578C009C478F /* NewEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewEventViewController.xib; sourceTree = "<group>"; };
+		F17D85C11974FDAC00010613 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		F17D85C21974FDAC00010613 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		F17D85C31974FDAC00010613 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F17D85C619750B6D00010613 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F17D85C81975100900010613 /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
 		F1E7435B1968F3D200F0FC23 /* AshaNet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AshaNet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7435E1968F3D200F0FC23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1E743601968F3D200F0FC23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +151,13 @@
 		F1E743AC1968F63F00F0FC23 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
 		F1E743AD1968F63F00F0FC23 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
 		F1E743AE1968F63F00F0FC23 /* ProjectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsViewController.xib; sourceTree = "<group>"; };
+		F1FC8DCC19765AD600EF2815 /* XOSplashVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XOSplashVideoController.h; sourceTree = "<group>"; };
+		F1FC8DCD19765AD600EF2815 /* XOSplashVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XOSplashVideoController.m; sourceTree = "<group>"; };
+		F1FC8DD019765D0F00EF2815 /* splash-568h~iphone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "splash-568h~iphone.mp4"; sourceTree = "<group>"; };
+		F1FC8DD119765D0F00EF2815 /* splash-landscape~ipad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "splash-landscape~ipad.mp4"; sourceTree = "<group>"; };
+		F1FC8DD219765D0F00EF2815 /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
+		F1FC8DD319765D0F00EF2815 /* splash~ipad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "splash~ipad.mp4"; sourceTree = "<group>"; };
+		F1FC8DD419765D0F00EF2815 /* splash~iphone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "splash~iphone.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17D85C719750B6D00010613 /* MediaPlayer.framework in Frameworks */,
 				F117D168196A37DD009981B8 /* MessageUI.framework in Frameworks */,
 				F117D166196A37D4009981B8 /* AVFoundation.framework in Frameworks */,
 				F117D164196A37B7009981B8 /* SystemConfiguration.framework in Frameworks */,
@@ -193,6 +215,7 @@
 		F1E7435D1968F3D200F0FC23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F17D85C619750B6D00010613 /* MediaPlayer.framework */,
 				F117D167196A37DD009981B8 /* MessageUI.framework */,
 				F117D165196A37D4009981B8 /* AVFoundation.framework */,
 				F117D163196A37B7009981B8 /* SystemConfiguration.framework */,
@@ -209,8 +232,13 @@
 		F1E743641968F3D200F0FC23 /* AshaNet_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F1FC8DCC19765AD600EF2815 /* XOSplashVideoController.h */,
+				F1FC8DCD19765AD600EF2815 /* XOSplashVideoController.m */,
 				F1E743C21968FAC000F0FC23 /* TableCells */,
 				F1E743C11968FAB000F0FC23 /* Models */,
+				F17D85C11974FDAC00010613 /* HomeViewController.h */,
+				F17D85C21974FDAC00010613 /* HomeViewController.m */,
+				F17D85C31974FDAC00010613 /* HomeViewController.xib */,
 				F1E7439D1968F63F00F0FC23 /* EventsViewController.h */,
 				F1E7439E1968F63F00F0FC23 /* EventsViewController.m */,
 				9F38218A196A046D00C8AF42 /* webViewController.h */,
@@ -245,6 +273,7 @@
 				F1E7436E1968F3D200F0FC23 /* AppDelegate.m */,
 				F1E743951968F63F00F0FC23 /* en.lproj */,
 				F1E743701968F3D200F0FC23 /* Images.xcassets */,
+				F1FC8DCF19765D0F00EF2815 /* Resources */,
 				F1E743651968F3D200F0FC23 /* Supporting Files */,
 			);
 			path = AshaNet_iOS;
@@ -255,6 +284,7 @@
 			children = (
 				F1E743661968F3D200F0FC23 /* AshaNet_iOS-Info.plist */,
 				F1E743671968F3D200F0FC23 /* InfoPlist.strings */,
+				F17D85C81975100900010613 /* movie.mov */,
 				F1E7436A1968F3D200F0FC23 /* main.m */,
 				F1E7436C1968F3D200F0FC23 /* AshaNet_iOS-Prefix.pch */,
 			);
@@ -324,6 +354,18 @@
 				F1E7439C1968F63F00F0FC23 /* EventsTableViewCell.xib */,
 			);
 			name = TableCells;
+			sourceTree = "<group>";
+		};
+		F1FC8DCF19765D0F00EF2815 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1FC8DD019765D0F00EF2815 /* splash-568h~iphone.mp4 */,
+				F1FC8DD119765D0F00EF2815 /* splash-landscape~ipad.mp4 */,
+				F1FC8DD219765D0F00EF2815 /* Splash.png */,
+				F1FC8DD319765D0F00EF2815 /* splash~ipad.mp4 */,
+				F1FC8DD419765D0F00EF2815 /* splash~iphone.mp4 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,15 +451,21 @@
 				F1E743BA1968F63F00F0FC23 /* ProjectDetailsViewController.xib in Resources */,
 				F1E743B41968F63F00F0FC23 /* EventsViewController.xib in Resources */,
 				F17B947A196EE008009C478F /* NewProjectViewController.xib in Resources */,
+				F1FC8DD519765D0F00EF2815 /* splash-568h~iphone.mp4 in Resources */,
+				F1FC8DD919765D0F00EF2815 /* splash~iphone.mp4 in Resources */,
+				F1FC8DD819765D0F00EF2815 /* splash~ipad.mp4 in Resources */,
+				F1FC8DD619765D0F00EF2815 /* splash-landscape~ipad.mp4 in Resources */,
 				F17B948A196F578C009C478F /* NewEventViewController.xib in Resources */,
 				F1E743BC1968F63F00F0FC23 /* ProjectsTableViewCell.xib in Resources */,
 				F1E743691968F3D200F0FC23 /* InfoPlist.strings in Resources */,
+				F1FC8DD719765D0F00EF2815 /* Splash.png in Resources */,
 				F1E743AF1968F63F00F0FC23 /* InfoPlist.strings in Resources */,
 				9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */,
 				F17B9472196E0EC5009C478F /* LoginViewController.xib in Resources */,
 				F117D160196A3013009981B8 /* ProjectDonateViewController.xib in Resources */,
 				9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */,
 				F1E743711968F3D200F0FC23 /* Images.xcassets in Resources */,
+				F17D85C51974FDAC00010613 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +522,7 @@
 				F1E743B51968F63F00F0FC23 /* GeneralDonateViewController.m in Sources */,
 				F1E743B11968F63F00F0FC23 /* EventsTableViewCell.m in Sources */,
 				F1E743B81968F63F00F0FC23 /* PayPalConfig.m in Sources */,
+				F17D85C41974FDAC00010613 /* HomeViewController.m in Sources */,
 				F17B9479196EE008009C478F /* NewProjectViewController.m in Sources */,
 				F160BEFD1969DE6300B3F361 /* Project.m in Sources */,
 				F1E743B31968F63F00F0FC23 /* EventsViewController.m in Sources */,
@@ -485,6 +534,7 @@
 				F1E743BB1968F63F00F0FC23 /* ProjectsTableViewCell.m in Sources */,
 				F1E7436B1968F3D200F0FC23 /* main.m in Sources */,
 				F17B9471196E0EC5009C478F /* LoginViewController.m in Sources */,
+				F1FC8DCE19765AD600EF2815 /* XOSplashVideoController.m in Sources */,
 				F17B9489196F578C009C478F /* NewEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

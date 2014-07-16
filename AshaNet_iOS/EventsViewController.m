@@ -22,6 +22,8 @@
 
 @implementation EventsViewController
 
+ CLLocationManager *locationManager;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,6 +36,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    [locationManager startUpdatingLocation];
+    
     self.navigationItem.title = @"Events - Fundraisers";
     
     [self getEventsFromParse];
@@ -108,6 +115,43 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+        NSString *lon = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+       NSString *lat= [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        NSLog(@"Change me %@ %@", lat,lon);
+    }
+    
+    CLGeocoder* geocoder = [[CLGeocoder alloc] init];
+    [geocoder geocodeAddressString:@"2211 N first st san jose CA 95131"
+                 completionHandler:^(NSArray* placemarks, NSError* error){
+                     for (CLPlacemark* aPlacemark in placemarks)
+                     {
+                         NSString *lon = [NSString stringWithFormat:@"%.8f", aPlacemark.location.coordinate.longitude];
+                         NSString *lat= [NSString stringWithFormat:@"%.8f", aPlacemark.location.coordinate.latitude];
+                      
+                         CLLocationDistance distance = [currentLocation distanceFromLocation:aPlacemark.location];
+
+                         NSLog(@"Change me %@ %@ %f", lat,lon, distance * 0.00062137);
+                     }
+                 }];
+    [manager stopUpdatingLocation];
 }
 
 @end

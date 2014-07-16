@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *descTextView;
 @property (weak, nonatomic) IBOutlet UITextView *eventTimeTxtView;
 @property (weak, nonatomic) IBOutlet UIButton *ticketsBtn;
+@property  (nonatomic,assign) NSInteger index;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *eventAddrTxtView;
@@ -57,6 +58,12 @@
     
     NSString *stringFromDate = [formatter stringFromDate:self.selectedEvent.eventTime];
     self.eventTimeTxtView.text = stringFromDate;
+    
+    UISwipeGestureRecognizer* swipeUpGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeUpFrom:)];
+    swipeUpGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    
+    [self.view addGestureRecognizer:swipeUpGestureRecognizer];
+
 }
 
 - (IBAction)onRightButton:(id)sender
@@ -70,6 +77,55 @@
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];
     [self presentViewController:activityController animated:YES completion:nil];
+}
+
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    return  self;
+    
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    return self;
+}
+
+
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
+    return 2.0;
+}
+// This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
+    UIView *containerView = [transitionContext containerView];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    toViewController.view.frame = containerView.frame;
+    [containerView addSubview:toViewController.view];
+    
+    toViewController.view.alpha = 0;
+    [UIView animateWithDuration:2 animations:^{
+        toViewController.view.alpha = 1;
+    } completion:^(BOOL finished) {
+        [transitionContext completeTransition:YES];
+    }];
+}
+
+- (void) handleSwipeUpFrom:(UIGestureRecognizer*)recognizer {
+    NSLog(@"Change me %d",self.index);
+    EventDetailsViewController *e = [[EventDetailsViewController alloc]init];
+    e.selectedEvent = self.events[self.index++];
+    e.events = self.events;
+    UISwipeGestureRecognizer* swipeUpGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeUpFrom:)];
+    swipeUpGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    
+    [e.view addGestureRecognizer:swipeUpGestureRecognizer];
+    
+    
+//    e.modalPresentationStyle = UIModalPresentationCustom;
+//    e.transitioningDelegate = self;
+    
+    
+    [self presentViewController:e animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning

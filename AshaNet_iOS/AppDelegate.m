@@ -10,6 +10,8 @@
 #import "ProjectsViewController.h"
 #import "EventsViewController.h"
 #import "GeneralDonateViewController.h"
+#import "HomeViewController.h"
+#import "XOSplashVideoController.h"
 #import <Parse/Parse.h>
 
 static NSString *KApp_id = @"0Kz1Jdnz3PZHlWjY1IBdzuv4tJZcpc8hrnT2mnbR";
@@ -21,44 +23,64 @@ static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    
+    
+    NSString *portraitVideoName = @"splash";
+    NSString *portraitImageName = @"Default.png";
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && self.window.frame.size.height > 480) {
+        portraitImageName = @"Default-568h@2x.png";
+        portraitVideoName = @"splash-568h~iphone";
+    }
+    
+    NSString *landscapeVideoName = nil; // n/a
+    NSString *landscapeImageName = nil; // n/a
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        portraitVideoName = @"splash";
+        portraitImageName = @"Default-Portrait.png";
+        landscapeVideoName = @"splash-landscape";
+        landscapeImageName = @"Default-Landscape.png";
+    }
+    
+    // our video
+    NSURL *portraitUrl = [[NSBundle mainBundle] URLForResource:portraitVideoName withExtension:@"mp4"];
+    NSURL *landscapeUrl = [[NSBundle mainBundle] URLForResource:landscapeVideoName withExtension:@"mp4"];
+    
+    // our splash controller
+    XOSplashVideoController *splashVideoController =
+    [[XOSplashVideoController alloc] initWithVideoPortraitUrl:portraitUrl
+                                            portraitImageName:portraitImageName
+                                                 landscapeUrl:landscapeUrl
+                                           landscapeImageName:landscapeImageName
+                                                     delegate:self];
+    // we'll start out with the spash view controller in the window
+    self.window.rootViewController = splashVideoController;
+
+    
     [Parse setApplicationId:KApp_id clientKey:KClient_Key];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    ProjectsViewController *pvc = [[ProjectsViewController alloc] init];
-    EventsViewController *evc = [[EventsViewController alloc] init];
-    GeneralDonateViewController *gdvc = [[GeneralDonateViewController alloc] init];
-
-    UINavigationController *projectsNavController = [[UINavigationController alloc] initWithRootViewController:pvc];
-    projectsNavController.tabBarItem.title = @"Projects";
-//    projectsNavController.tabBarItem.image = [UIImage imageNamed:@"MovieIcon"];
     
-    UINavigationController *eventsNavController = [[UINavigationController alloc] initWithRootViewController:evc];
-    eventsNavController.tabBarItem.title = @"Events";
-    
-    UINavigationController *donateNavController = [[UINavigationController alloc] initWithRootViewController:gdvc];
-    donateNavController.tabBarItem.title = @"Donate";
-    
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[projectsNavController, donateNavController, eventsNavController];
-    
-    tabBarController.tabBar.tintColor = [UIColor yellowColor];
-    tabBarController.tabBar.barTintColor = [UIColor blackColor];
-    
-    [[UINavigationBar appearance] setBarTintColor: [UIColor orangeColor]];
-    NSShadow *shadow = [[NSShadow alloc] init];
-    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
-    shadow.shadowOffset = CGSizeMake(0, 1);
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName, shadow, NSShadowAttributeName,[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
-
-    
-    self.window.rootViewController = tabBarController;
+  //  self.window.rootViewController = [[HomeViewController alloc]init];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
 }
+- (void)splashVideoLoaded:(XOSplashVideoController *)splashVideo
+{
+    // load up our real view controller, but don't put it in to the window until the video is done
+    // if there's anything expensive to do it should happen in the background now
+    //self.viewController = [[XOViewController alloc] initWithNibName:@"XOViewController" bundle:nil];
+
+}
+
+- (void)splashVideoComplete:(XOSplashVideoController *)splashVideo
+{
+    // swap out the splash controller for our app's
+  self.window.rootViewController = [[HomeViewController alloc]init];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

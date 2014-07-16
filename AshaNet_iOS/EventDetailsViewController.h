@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 
-@interface EventDetailsViewController : UIViewController
+@interface EventDetailsViewController : UIViewController <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning, UIViewControllerInteractiveTransitioning>
 
+@property (strong, nonatomic) NSArray *events;
 @property (strong, nonatomic, readwrite) Event *selectedEvent;
 
 @end
