@@ -10,7 +10,7 @@
 #import "ProjectsViewController.h"
 #import "EventsViewController.h"
 #import "GeneralDonateViewController.h"
-#import "HomeViewController.h"
+#import "AshaHomeViewController.h"
 #import "XOSplashVideoController.h"
 #import <Parse/Parse.h>
 #import "ContainerViewController.h"
@@ -165,14 +165,10 @@ static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
                                 ];
 	
 	for (NSDictionary *configuration in configurations) {
-		ChildViewController *childViewController = [[ChildViewController alloc] init];
-		
-		childViewController.title = configuration[@"title"];
-		childViewController.themeColor = configuration[@"color"];
-		childViewController.tabBarItem.image = [UIImage imageNamed:configuration[@"title"]];
-		childViewController.tabBarItem.selectedImage = [UIImage imageNamed:[configuration[@"title"] stringByAppendingString:@" Selected"]];
-		
-		[childViewControllers addObject:childViewController];
+        AshaHomeViewController *ahvc = [[AshaHomeViewController alloc]init];
+
+		ahvc.themeColor = configuration[@"color"];
+		[childViewControllers addObject:ahvc];
 	}
 	
 	return childViewControllers;
