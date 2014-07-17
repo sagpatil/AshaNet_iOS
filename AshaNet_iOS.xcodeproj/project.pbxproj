@@ -17,6 +17,8 @@
 		9F3821891969E4B900C8AF42 /* EventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3821871969E4B900C8AF42 /* EventDetailsViewController.xib */; };
 		9F38218D196A046D00C8AF42 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F38218B196A046D00C8AF42 /* webViewController.m */; };
 		9F38218E196A046D00C8AF42 /* webViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F38218C196A046D00C8AF42 /* webViewController.xib */; };
+		9F7E44781977B67500DF826B /* AshaHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E44761977B67500DF826B /* AshaHomeViewController.m */; };
+		9F7E44791977B67500DF826B /* AshaHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E44771977B67500DF826B /* AshaHomeViewController.xib */; };
 		F117D15F196A3013009981B8 /* ProjectDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F117D15D196A3013009981B8 /* ProjectDonateViewController.m */; };
 		F117D160196A3013009981B8 /* ProjectDonateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */; };
 		F117D162196A37AD009981B8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F117D161196A37AD009981B8 /* CoreLocation.framework */; };
@@ -98,6 +100,9 @@
 		9F38218A196A046D00C8AF42 /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
 		9F38218B196A046D00C8AF42 /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
 		9F38218C196A046D00C8AF42 /* webViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = webViewController.xib; sourceTree = "<group>"; };
+		9F7E44751977B67500DF826B /* AshaHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AshaHomeViewController.h; sourceTree = "<group>"; };
+		9F7E44761977B67500DF826B /* AshaHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AshaHomeViewController.m; sourceTree = "<group>"; };
+		9F7E44771977B67500DF826B /* AshaHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AshaHomeViewController.xib; sourceTree = "<group>"; };
 		F117D15C196A3013009981B8 /* ProjectDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDonateViewController.h; sourceTree = "<group>"; };
 		F117D15D196A3013009981B8 /* ProjectDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDonateViewController.m; sourceTree = "<group>"; };
 		F117D15E196A3013009981B8 /* ProjectDonateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectDonateViewController.xib; sourceTree = "<group>"; };
@@ -256,6 +261,9 @@
 				F17D85C31974FDAC00010613 /* HomeViewController.xib */,
 				F1E7439D1968F63F00F0FC23 /* EventsViewController.h */,
 				F1E7439E1968F63F00F0FC23 /* EventsViewController.m */,
+				9F7E44751977B67500DF826B /* AshaHomeViewController.h */,
+				9F7E44761977B67500DF826B /* AshaHomeViewController.m */,
+				9F7E44771977B67500DF826B /* AshaHomeViewController.xib */,
 				9F38218A196A046D00C8AF42 /* webViewController.h */,
 				9F38218B196A046D00C8AF42 /* webViewController.m */,
 				9F38218C196A046D00C8AF42 /* webViewController.xib */,
@@ -476,6 +484,7 @@
 				F1E743BA1968F63F00F0FC23 /* ProjectDetailsViewController.xib in Resources */,
 				F1E743B41968F63F00F0FC23 /* EventsViewController.xib in Resources */,
 				F17B947A196EE008009C478F /* NewProjectViewController.xib in Resources */,
+				9F7E44791977B67500DF826B /* AshaHomeViewController.xib in Resources */,
 				F1FC8DD519765D0F00EF2815 /* splash-568h~iphone.mp4 in Resources */,
 				F1FC8DD919765D0F00EF2815 /* splash~iphone.mp4 in Resources */,
 				F1FC8DD819765D0F00EF2815 /* splash~ipad.mp4 in Resources */,
@@ -547,6 +556,7 @@
 				F117D15F196A3013009981B8 /* ProjectDonateViewController.m in Sources */,
 				F1E743B51968F63F00F0FC23 /* GeneralDonateViewController.m in Sources */,
 				F1E743B11968F63F00F0FC23 /* EventsTableViewCell.m in Sources */,
+				9F7E44781977B67500DF826B /* AshaHomeViewController.m in Sources */,
 				F1E743B81968F63F00F0FC23 /* PayPalConfig.m in Sources */,
 				F17D85C41974FDAC00010613 /* HomeViewController.m in Sources */,
 				F17B9479196EE008009C478F /* NewProjectViewController.m in Sources */,

@@ -323,7 +323,7 @@ static CGFloat const kButtonSlotHeight = 44;
 
 @implementation PrivateAnimatedTransition
 
-static CGFloat const kChildViewPadding = 16;
+static CGFloat const kChildViewPadding = 0;
 static CGFloat const kDamping = 0.75;
 static CGFloat const kInitialSpringVelocity = 0.5;
 
@@ -339,10 +339,10 @@ static CGFloat const kInitialSpringVelocity = 0.5;
 	
 	// When sliding the views horizontally in and out, figure out whether we are going left or right.
 	BOOL goingBottom = ([transitionContext initialFrameForViewController:toViewController].origin.x < [transitionContext finalFrameForViewController:fromViewController].origin.x);
-    NSLog(@"%f",[transitionContext initialFrameForViewController:toViewController].origin.x);
-    NSLog(@"%f",[transitionContext finalFrameForViewController:toViewController].origin.x);
-    NSLog(@"%f",[transitionContext initialFrameForViewController:fromViewController].origin.x);
-    NSLog(@"%f",[transitionContext finalFrameForViewController:fromViewController].origin.x);
+//    NSLog(@"%f",[transitionContext initialFrameForViewController:toViewController].origin.x);
+//    NSLog(@"%f",[transitionContext finalFrameForViewController:toViewController].origin.x);
+//    NSLog(@"%f",[transitionContext initialFrameForViewController:fromViewController].origin.x);
+//    NSLog(@"%f",[transitionContext finalFrameForViewController:fromViewController].origin.x);
     
 	CGFloat travelDistance = [transitionContext containerView].bounds.size.height + kChildViewPadding;
 	CGAffineTransform travel = CGAffineTransformMakeTranslation (0,goingBottom ? -travelDistance : travelDistance  );
