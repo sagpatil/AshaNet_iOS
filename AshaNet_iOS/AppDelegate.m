@@ -12,8 +12,8 @@
 #import "GeneralDonateViewController.h"
 #import <Parse/Parse.h>
 
-static NSString *KApp_id = @"0Kz1Jdnz3PZHlWjY1IBdzuv4tJZcpc8hrnT2mnbR";
-static NSString *KClient_Key = @"k6lG4PhbwxJp2zpwo7pgEGUA73zxtYplMBLvtGnS";
+static NSString *KApp_id = @"wTCpRXKHhHi01mljPBZh67WahWocYaVaIKai2vb3";
+static NSString *KClient_Key = @"vSpBeRLD4PFkknI8tbiCLn79YoeAKYbHxTT98PS1";
 
 @implementation AppDelegate
 
